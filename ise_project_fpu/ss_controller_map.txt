@@ -1,0 +1,16 @@
+ --> ss_controller_pkg
+ss_controller/Forward speed tracking/MAC instruction --> MAC_instruction
+ss_controller/Forward speed tracking/MAC instruction Controller1 --> MAC_instruction_Controller1
+ss_controller/Forward speed tracking --> Forward_speed_tracking
+ss_controller/Pitch speed compensator/MAC instruction --> MAC_instruction_block
+ss_controller/Pitch speed compensator/MAC instruction Controller1 --> MAC_instruction_Controller1_block
+ss_controller/Pitch speed compensator --> Pitch_speed_compensator
+ss_controller/Roll speed compensator/MAC instruction --> MAC_instruction_block1
+ss_controller/Roll speed compensator --> Roll_speed_compensator
+ss_controller/Side speed tracking/MAC instruction --> MAC_instruction_block2
+ss_controller/Side speed tracking --> Side_speed_tracking
+ss_controller/Vectical speed tracking/MAC instruction --> MAC_instruction_block3
+ss_controller/Vectical speed tracking --> Vectical_speed_tracking
+ss_controller/Yaw speed/MAC instruction --> MAC_instruction_block4
+ss_controller/Yaw speed --> Yaw_speed
+ss_controller --> ss_controller

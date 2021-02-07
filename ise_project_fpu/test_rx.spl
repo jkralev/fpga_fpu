@@ -1,0 +1,16 @@
+[Inputs]
+clk
+reset
+clk_enable
+RX_CLK
+RX_DV
+RX_ER
+=RX_D[0:3]=
+[Outputs]
+ce_out
+BRAM_clk
+BRAM_en
+read_ev
+=BRAM_addr[10:0]=
+=BRAM_data[0:7]=
+[BiDir]

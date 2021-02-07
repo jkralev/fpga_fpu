@@ -1,0 +1,22 @@
+sch2sym -intstyle ise -family spartan3e -refsym main D:/Dan/FPGA_FPU/ise_project_fpu/main.sch D:/Dan/FPGA_FPU/ise_project_fpu/main.sym 
+sch2sym -intstyle ise -family spartan3e -refsym main D:/Dan/FPGA_FPU/ise_project_fpu/main.sch D:/Dan/FPGA_FPU/ise_project_fpu/main.sym 
+sch2sym -intstyle ise -family spartan3e -refsym main D:/Dan/FPGA_FPU/ise_project_fpu/main.sch D:/Dan/FPGA_FPU/ise_project_fpu/main.sym 
+sch2sym -intstyle ise -family spartan3e -refsym main D:/Dan/FPGA_FPU/ise_project_fpu/main.sch D:/Dan/FPGA_FPU/ise_project_fpu/main.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym main D:/Dan/FPGA_FPU/ise_project_fpu/main.sch D:/Dan/FPGA_FPU/ise_project_fpu/main.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym main D:/Dan/FPGA_FPU/ise_project_fpu/main.sch D:/Dan/FPGA_FPU/ise_project_fpu/main.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym main D:/Dan/FPGA_FPU/ise_project_fpu/main.sch D:/Dan/FPGA_FPU/ise_project_fpu/main.sym 
+sch2hdl -intstyle ise -family spartan3e -verilog main_drc.vf -w D:/Dan/FPGA_FPU/ise_project_fpu/main.sch 
+sch2hdl -intstyle ise -family spartan3e -verilog main_drc.vf -w D:/Dan/FPGA_FPU/ise_project_fpu/main.sch 
+sch2hdl -intstyle ise -family spartan3e -verilog main_drc.vf -w D:/Dan/FPGA_FPU/ise_project_fpu/main.sch 
+sch2hdl -intstyle ise -family spartan3e -verilog main_drc.vf -w D:/Dan/FPGA_FPU/ise_project_fpu/main.sch 
+sch2sym -intstyle ise -family spartan3e -w -refsym main D:/Dan/FPGA_FPU/ise_project_fpu/main.sch D:/Dan/FPGA_FPU/ise_project_fpu/main.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym main D:/Dan/FPGA_FPU/ise_project_fpu/main.sch D:/Dan/FPGA_FPU/ise_project_fpu/main.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym main D:/Dan/FPGA_FPU/ise_project_fpu/main.sch D:/Dan/FPGA_FPU/ise_project_fpu/main.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym main D:/Dan/FPGA_FPU/ise_project_fpu/main.sch D:/Dan/FPGA_FPU/ise_project_fpu/main.sym 
+sch2hdl -intstyle ise -family spartan3e -verilog main_drc.vf -w D:/Dan/FPGA_FPU/ise_project_fpu/main.sch 
+sch2hdl -intstyle ise -family spartan3e -verilog main_drc.vf -w D:/Dan/FPGA_FPU/ise_project_fpu/main.sch 
+sch2hdl -intstyle ise -family spartan3e -verilog main_drc.vf -w D:/Dan/FPGA_FPU/ise_project_fpu/main.sch 
+sch2hdl -intstyle ise -family spartan3e -verilog main_drc.vf -w D:/Dan/FPGA_FPU/ise_project_fpu/main.sch 
+sch2hdl -intstyle ise -family spartan3e -verilog main_drc.vf -w D:/Dan/FPGA_FPU/ise_project_fpu/main.sch 
+sch2sym -intstyle ise -family spartan3e -w -refsym main D:/Dan/FPGA_FPU/ise_project_fpu/main.sch D:/Dan/FPGA_FPU/ise_project_fpu/main.sym 
+sch2hdl -intstyle ise -family spartan3e -verilog main_drc.vf -w D:/Dan/FPGA_FPU/ise_project_fpu/main.sch 

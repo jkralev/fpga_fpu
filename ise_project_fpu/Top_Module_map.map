@@ -1,0 +1,156 @@
+Release 13.1 Map O.40d (nt64)
+Xilinx Map Application Log File for Design 'Top_Module'
+
+Design Information
+------------------
+Command Line   : map -filter iseconfig/filter.filter -intstyle ise -p
+xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Module_map.ncd
+Top_Module.ngd Top_Module.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Thu Mar 26 18:08:42 2015
+
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:54 - 'xc3s500e' is a WebPack part.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+----------------------------------------------------------------------
+Mapping design into LUTs...
+WARNING:MapLib:328 - Block XLXI_66/u_4bit2uint8 is not a recognized logical
+   block. The mapper will continue to process the design but there may be design
+   problems if this block does not get trimmed.
+WARNING:MapLib:328 - Block XLXI_66/u_int2bit is not a recognized logical block.
+   The mapper will continue to process the design but there may be design
+   problems if this block does not get trimmed.
+Running directed packing...
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_sum/exp1_out1<17>1
+   failed to merge with F5 multiplexer
+   XLXI_150/u_fp_sum/u_Normalize/y_tmp<18>1263_SW0_SW0.  Two or more symbols
+   belong to different KEEP_HIERARCHY boundaries and can not be merged into the
+   same component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_148/u_ivedsp/Switch_out1<0>1
+   failed to merge with F5 multiplexer
+   XLXI_148/u_ivedsp/u_12_bit_Program_Counter/new_addr<0>_f5.  Two or more
+   symbols belong to different KEEP_HIERARCHY boundaries and can not be merged
+   into the same component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_mul/Gain2_out1<43>1
+   failed to merge with F5 multiplexer
+   XLXI_150/u_fp_mul/u_Normalize_mul/y_tmp<4>968_SW1.  Two or more symbols
+   belong to different KEEP_HIERARCHY boundaries and can not be merged into the
+   same component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_mul/Gain2_out1<43>1
+   failed to merge with F5 multiplexer
+   XLXI_150/u_fp_mul/u_Normalize_mul/y_tmp<6>947_SW1.  Two or more symbols
+   belong to different KEEP_HIERARCHY boundaries and can not be merged into the
+   same component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_sum/exp1_out1<5>1 failed
+   to merge with F5 multiplexer XLXI_150/u_fp_sum/u_Normalize/y_tmp<19>536.  Two
+   or more symbols belong to different KEEP_HIERARCHY boundaries and can not be
+   merged into the same component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_sum/exp1_out1<24>1
+   failed to merge with F5 multiplexer
+   XLXI_150/u_fp_sum/u_Normalize/de_tmp<3>82_SW0.  Two or more symbols belong to
+   different KEEP_HIERARCHY boundaries and can not be merged into the same
+   component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_mul/Gain2_out1<39>1
+   failed to merge with F5 multiplexer
+   XLXI_150/u_fp_mul/u_Normalize_mul/de_tmp<1>120_SW0.  Two or more symbols
+   belong to different KEEP_HIERARCHY boundaries and can not be merged into the
+   same component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_mul/Gain2_out1<47>1
+   failed to merge with F5 multiplexer
+   XLXI_150/u_fp_mul/u_Normalize_mul/de_tmp<2>114_SW2.  Two or more symbols
+   belong to different KEEP_HIERARCHY boundaries and can not be merged into the
+   same component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_mul/Gain2_out1<43>1
+   failed to merge with F5 multiplexer
+   XLXI_150/u_fp_mul/u_Normalize_mul/y_tmp<10>932_SW1.  Two or more symbols
+   belong to different KEEP_HIERARCHY boundaries and can not be merged into the
+   same component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_mul/Gain2_out1<20>1
+   failed to merge with F5 multiplexer
+   XLXI_150/u_fp_mul/u_Normalize_mul/y_tmp<0>992_SW1_SW0_f5.  Two or more
+   symbols belong to different KEEP_HIERARCHY boundaries and can not be merged
+   into the same component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_mul/Gain2_out1<43>1
+   failed to merge with F5 multiplexer
+   XLXI_150/u_fp_mul/u_Normalize_mul/y_tmp<13>932_SW1.  Two or more symbols
+   belong to different KEEP_HIERARCHY boundaries and can not be merged into the
+   same component.  The design will exhibit suboptimal timing.
+Running delay-based LUT packing...
+Running related packing...
+Updating timing models...
+WARNING:PhysDesignRules:372 - Gated clock. Clock net XLXI_162/clk100 is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   XLXI_162/spi_program_not0000 is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA5> on
+   block:<XLXI_78/Mram_RAM4.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA6> on
+   block:<XLXI_78/Mram_RAM4.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA7> on
+   block:<XLXI_78/Mram_RAM4.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:367 - The signal <XLXI_5/u_Transmit/GLOBAL_LOGIC1> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <XLXI_66/u_Receive/GLOBAL_LOGIC1> is
+   incomplete. The signal does not drive any load pins in the design.
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   20
+Logic Utilization:
+  Number of Slice Flip Flops:           571 out of   9,312    6%
+  Number of 4 input LUTs:             5,033 out of   9,312   54%
+Logic Distribution:
+  Number of occupied Slices:          2,854 out of   4,656   61%
+    Number of Slices containing only related logic:   2,854 out of   2,854 100%
+    Number of Slices containing unrelated logic:          0 out of   2,854   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       5,196 out of   9,312   55%
+    Number used as logic:             5,032
+    Number used as a route-thru:        163
+    Number used as Shift registers:       1
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 28 out of     232   12%
+  Number of RAMB16s:                     14 out of      20   70%
+  Number of BUFGMUXs:                     2 out of      24    8%
+  Number of MULT18X18SIOs:                4 out of      20   20%
+
+Average Fanout of Non-Clock Nets:                3.70
+
+Peak Memory Usage:  272 MB
+Total REAL time to MAP completion:  7 secs 
+Total CPU time to MAP completion:   7 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "Top_Module_map.mrp" for details.

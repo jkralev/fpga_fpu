@@ -1,0 +1,6 @@
+work "D:\Dan\FPGA_Test\ise_project_1\contr1_pkg.vhd"
+work "D:\Dan\FPGA_Test\ise_project_1\alpha8bit2uint8.vhd"
+work "D:\Dan\FPGA_Test\ise_project_1\UnPack.vhd"
+work "D:\Dan\FPGA_Test\ise_project_1\Pack.vhd"
+work "D:\Dan\FPGA_Test\ise_project_1\Handle_command.vhd"
+work "D:\Dan\FPGA_Test\ise_project_1\contr1.vhd"

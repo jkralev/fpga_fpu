@@ -1,0 +1,8 @@
+[Inputs]
+ADD_SUB
+clk
+=FP_A[31:0]=
+=FP_B[31:0]=
+[Outputs]
+=FP_Z[31:0]=
+[BiDir]

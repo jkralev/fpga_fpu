@@ -1,0 +1,57 @@
+xst -intstyle ise -filter "D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter" -ifn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.xst" -ofn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc ise_project_1.ucf -p xc3s500e-fg320-5 Top_Module.ngc Top_Module.ngd  
+map -filter "iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Module_map.ncd Top_Module.ngd Top_Module.pcf 
+par -filter "iseconfig/filter.filter" -w -intstyle ise -ol std -t 6 Top_Module_map.ncd Top_Module.ncd Top_Module.pcf 
+trce -filter D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter -intstyle ise -e 3 -a -s 5 -n 3 -xml Top_Module.twx Top_Module.ncd -o Top_Module.twr Top_Module.pcf -ucf ise_project_1.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f Top_Module.ut Top_Module.ncd 
+xst -intstyle ise -filter "D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter" -ifn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.xst" -ofn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc ise_project_1.ucf -p xc3s500e-fg320-5 Top_Module.ngc Top_Module.ngd  
+map -filter "iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Module_map.ncd Top_Module.ngd Top_Module.pcf 
+par -filter "iseconfig/filter.filter" -w -intstyle ise -ol std -t 6 Top_Module_map.ncd Top_Module.ncd Top_Module.pcf 
+trce -filter D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter -intstyle ise -e 3 -a -s 5 -n 3 -xml Top_Module.twx Top_Module.ncd -o Top_Module.twr Top_Module.pcf -ucf ise_project_1.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f Top_Module.ut Top_Module.ncd 
+xst -intstyle ise -filter "D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter" -ifn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.xst" -ofn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc ise_project_1.ucf -p xc3s500e-fg320-5 Top_Module.ngc Top_Module.ngd  
+map -filter "iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Module_map.ncd Top_Module.ngd Top_Module.pcf 
+par -filter "iseconfig/filter.filter" -w -intstyle ise -ol std -t 6 Top_Module_map.ncd Top_Module.ncd Top_Module.pcf 
+trce -filter D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter -intstyle ise -e 3 -a -s 5 -n 3 -xml Top_Module.twx Top_Module.ncd -o Top_Module.twr Top_Module.pcf -ucf ise_project_1.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f Top_Module.ut Top_Module.ncd 
+xst -intstyle ise -filter "D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter" -ifn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.xst" -ofn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.syr" 
+xst -intstyle ise -filter "D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter" -ifn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.xst" -ofn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.syr" 
+xst -intstyle ise -filter "D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter" -ifn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.xst" -ofn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc ise_project_1.ucf -p xc3s500e-fg320-5 Top_Module.ngc Top_Module.ngd  
+map -filter "iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Module_map.ncd Top_Module.ngd Top_Module.pcf 
+par -filter "iseconfig/filter.filter" -w -intstyle ise -ol std -t 6 Top_Module_map.ncd Top_Module.ncd Top_Module.pcf 
+trce -filter D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter -intstyle ise -e 3 -a -s 5 -n 3 -xml Top_Module.twx Top_Module.ncd -o Top_Module.twr Top_Module.pcf -ucf ise_project_1.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f Top_Module.ut Top_Module.ncd 
+xst -intstyle ise -filter "D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter" -ifn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.xst" -ofn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc ise_project_1.ucf -p xc3s500e-fg320-5 Top_Module.ngc Top_Module.ngd  
+map -filter "iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Module_map.ncd Top_Module.ngd Top_Module.pcf 
+par -filter "iseconfig/filter.filter" -w -intstyle ise -ol std -t 6 Top_Module_map.ncd Top_Module.ncd Top_Module.pcf 
+trce -filter D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter -intstyle ise -e 3 -a -s 5 -n 3 -xml Top_Module.twx Top_Module.ncd -o Top_Module.twr Top_Module.pcf -ucf ise_project_1.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f Top_Module.ut Top_Module.ncd 
+xst -intstyle ise -filter "D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter" -ifn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.xst" -ofn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc ise_project_1.ucf -p xc3s500e-fg320-5 Top_Module.ngc Top_Module.ngd  
+map -filter "iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Module_map.ncd Top_Module.ngd Top_Module.pcf 
+par -filter "iseconfig/filter.filter" -w -intstyle ise -ol std -t 6 Top_Module_map.ncd Top_Module.ncd Top_Module.pcf 
+trce -filter D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter -intstyle ise -e 3 -a -s 5 -n 3 -xml Top_Module.twx Top_Module.ncd -o Top_Module.twr Top_Module.pcf -ucf ise_project_1.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f Top_Module.ut Top_Module.ncd 
+xst -intstyle ise -filter "D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter" -ifn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.xst" -ofn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc ise_project_1.ucf -p xc3s500e-fg320-5 Top_Module.ngc Top_Module.ngd  
+map -filter "iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Module_map.ncd Top_Module.ngd Top_Module.pcf 
+par -filter "iseconfig/filter.filter" -w -intstyle ise -ol std -t 6 Top_Module_map.ncd Top_Module.ncd Top_Module.pcf 
+par -filter "iseconfig/filter.filter" -w -intstyle ise -ol std -t 6 Top_Module_map.ncd Top_Module.ncd Top_Module.pcf 
+trce -filter D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter -intstyle ise -e 3 -a -s 5 -n 3 -xml Top_Module.twx Top_Module.ncd -o Top_Module.twr Top_Module.pcf -ucf ise_project_1.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f Top_Module.ut Top_Module.ncd 
+xst -intstyle ise -filter "D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter" -ifn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.xst" -ofn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc ise_project_1.ucf -p xc3s500e-fg320-5 Top_Module.ngc Top_Module.ngd  
+map -filter "iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Module_map.ncd Top_Module.ngd Top_Module.pcf 
+par -filter "iseconfig/filter.filter" -w -intstyle ise -ol std -t 6 Top_Module_map.ncd Top_Module.ncd Top_Module.pcf 
+trce -filter D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter -intstyle ise -e 3 -a -s 5 -n 3 -xml Top_Module.twx Top_Module.ncd -o Top_Module.twr Top_Module.pcf -ucf ise_project_1.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f Top_Module.ut Top_Module.ncd 
+xst -intstyle ise -filter "D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter" -ifn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.xst" -ofn "D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc ise_project_1.ucf -p xc3s500e-fg320-5 Top_Module.ngc Top_Module.ngd  
+map -filter "iseconfig/filter.filter" -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Module_map.ncd Top_Module.ngd Top_Module.pcf 
+par -filter "iseconfig/filter.filter" -w -intstyle ise -ol std -t 6 Top_Module_map.ncd Top_Module.ncd Top_Module.pcf 
+trce -filter D:/Dan/FPGA_FPU/ise_project_fpu/iseconfig/filter.filter -intstyle ise -e 3 -a -s 5 -n 3 -xml Top_Module.twx Top_Module.ncd -o Top_Module.twr Top_Module.pcf -ucf ise_project_1.ucf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f Top_Module.ut Top_Module.ncd 

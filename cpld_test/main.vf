@@ -1,0 +1,74 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 8.1i
+//  \   \         Application : sch2verilog
+//  /   /         Filename : main.vf
+// /___/   /\     Timestamp : 01/13/2013 22:33:46
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: E:\Xilinx\bin\nt\sch2verilog.exe -intstyle ise -family xbr -w D:/Dan/FPGA_FPU/cpld_test/main.sch main.vf
+//Design Name: main
+//Device: xbr
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module main(GCLK10, 
+            XLXN_2, 
+            XLXN_3, 
+            XLXN_4, 
+            XLXN_5, 
+            XLXN_6, 
+            XLXN_7, 
+            XLXN_8, 
+            XLXN_9, 
+            XLXN_10, 
+            XLXN_11, 
+            XLXN_12, 
+            XLXN_13, 
+            XLXN_14, 
+            XLXN_15, 
+            XLXN_16);
+
+    input GCLK10;
+    input XLXN_2;
+    input [31:0] XLXN_3;
+    input [31:0] XLXN_4;
+    input [2:0] XLXN_5;
+    input [1:0] XLXN_6;
+   output XLXN_7;
+   output XLXN_8;
+   output XLXN_9;
+   output XLXN_10;
+   output XLXN_11;
+   output XLXN_12;
+   output XLXN_13;
+   output XLXN_14;
+   output XLXN_15;
+   output [31:0] XLXN_16;
+   
+   
+   fpu XLXI_1 (.clk_i(GCLK10), 
+               .fpu_op_i(XLXN_5[2:0]), 
+               .opa_i(XLXN_3[31:0]), 
+               .opb_i(XLXN_4[31:0]), 
+               .rmode_i(XLXN_6[1:0]), 
+               .start_i(XLXN_2), 
+               .div_zero_o(XLXN_11), 
+               .ine_o(XLXN_8), 
+               .inf_o(XLXN_12), 
+               .output_o(XLXN_16[31:0]), 
+               .overflow_o(XLXN_9), 
+               .qnan_o(XLXN_14), 
+               .ready_o(XLXN_7), 
+               .snan_o(XLXN_15), 
+               .underflow_o(XLXN_10), 
+               .zero_o(XLXN_13));
+endmodule

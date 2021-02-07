@@ -1,0 +1,6 @@
+[Inputs]
+=adr2[10:0]=
+=adr3[10:0]=
+[Outputs]
+=adr[10:0]=
+[BiDir]

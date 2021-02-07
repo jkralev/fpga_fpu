@@ -1,0 +1,235 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 13.1
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Top_Module.vf
+// /___/   /\     Timestamp : 03/25/2015 11:49:10
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.vf -w D:/Dan/FPGA_FPU/ise_project_fpu/Top_Module.sch
+//Design Name: Top_Module
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Top_Module(a_sdo, 
+                  clk, 
+                  E_RXD, 
+                  E_RX_CLK, 
+                  E_RX_DV, 
+                  E_RX_ER, 
+                  E_TX_CLK, 
+                  a_clk, 
+                  a_cs, 
+                  a_sdi, 
+                  E_TXD, 
+                  E_TX_EN, 
+                  E_TX_ER, 
+                  led0, 
+                  XLXN_179, 
+                  XLXN_184, 
+                  XLXN_269, 
+                  XLXN_270, 
+                  XLXN_326, 
+                  XLXN_401);
+
+    input a_sdo;
+    input clk;
+    input [0:3] E_RXD;
+    input E_RX_CLK;
+    input E_RX_DV;
+    input E_RX_ER;
+    input E_TX_CLK;
+   output a_clk;
+   output [2:0] a_cs;
+   output a_sdi;
+   output [0:3] E_TXD;
+   output E_TX_EN;
+   output E_TX_ER;
+   output led0;
+   output XLXN_179;
+   output XLXN_184;
+   output XLXN_269;
+   output XLXN_270;
+   output XLXN_326;
+   output XLXN_401;
+   
+   wire XLXN_151;
+   wire XLXN_181;
+   wire XLXN_182;
+   wire XLXN_183;
+   wire XLXN_191;
+   wire [7:0] XLXN_201;
+   wire [10:0] XLXN_242;
+   wire XLXN_247;
+   wire XLXN_271;
+   wire [10:0] XLXN_272;
+   wire [0:7] XLXN_276;
+   wire XLXN_277;
+   wire XLXN_278;
+   wire XLXN_376;
+   wire XLXN_441;
+   wire XLXN_448;
+   wire [11:0] XLXN_705;
+   wire XLXN_706;
+   wire XLXN_708;
+   wire [11:0] XLXN_709;
+   wire [31:0] XLXN_710;
+   wire XLXN_716;
+   wire [15:0] XLXN_718;
+   wire [31:0] XLXN_734;
+   wire [3:0] XLXN_736;
+   wire [10:0] XLXN_737;
+   wire XLXN_739;
+   wire [7:0] XLXN_740;
+   wire [13:0] XLXN_741;
+   wire [7:0] XLXN_743;
+   wire [13:0] XLXN_751;
+   wire [7:0] XLXN_753;
+   wire [31:0] XLXN_760;
+   wire [31:0] XLXN_761;
+   wire [31:0] XLXN_762;
+   wire [31:0] XLXN_763;
+   wire [31:0] XLXN_786;
+   wire [31:0] XLXN_787;
+   wire XLXN_805;
+   wire [31:0] XLXN_807;
+   wire [31:0] XLXN_808;
+   wire [11:0] XLXN_810;
+   wire [11:0] XLXN_812;
+   wire [11:0] XLXN_814;
+   wire [11:0] XLXN_815;
+   wire E_TX_EN_DUMMY;
+   
+   assign E_TX_EN = E_TX_EN_DUMMY;
+   test_lan  XLXI_5 (.btn_1(XLXN_182), 
+                    .clk(clk), 
+                    .clk_enable(XLXN_151), 
+                    .Data_out(XLXN_201[7:0]), 
+                    .reset(XLXN_183), 
+                    .TX_CLK(E_TX_CLK), 
+                    .Address(XLXN_242[10:0]), 
+                    .ce_out(XLXN_179), 
+                    .led_0(led0), 
+                    .tx_data(E_TXD[0:3]), 
+                    .tx_en(E_TX_EN_DUMMY));
+   GND  XLXI_40 (.G(XLXN_181));
+   VCC  XLXI_41 (.P(XLXN_151));
+   Generator1  XLXI_53 (.clk(clk), 
+                       .clk_enable(XLXN_191), 
+                       .event_r(E_TX_EN_DUMMY), 
+                       .reset(XLXN_181), 
+                       .send(XLXN_706), 
+                       .ce_out(XLXN_184), 
+                       .out_event(XLXN_182), 
+                       .res_tr(XLXN_183));
+   VCC  XLXI_54 (.P(XLXN_191));
+   ram1dual  XLXI_55 (.addrr(XLXN_751[13:0]), 
+                     .addrw(XLXN_741[13:0]), 
+                     .clk(clk), 
+                     .di(XLXN_740[7:0]), 
+                     .en(XLXN_448), 
+                     .we(XLXN_739), 
+                     .do(XLXN_753[7:0]));
+   rom1  XLXI_56 (.Address(XLXN_242[10:0]), 
+                 .Data_out1(XLXN_753[7:0]), 
+                 .Select_mem(XLXN_736[3:0]), 
+                 .Address2(XLXN_751[13:0]), 
+                 .Data(XLXN_201[7:0]));
+   ram1  XLXI_62 (.addrr(XLXN_737[10:0]), 
+                 .addrw(XLXN_272[10:0]), 
+                 .clk(clk), 
+                 .di(XLXN_276[0:7]), 
+                 .en(XLXN_247), 
+                 .we(XLXN_271), 
+                 .do(XLXN_743[7:0]));
+   VCC  XLXI_63 (.P(XLXN_247));
+   test_rx  XLXI_66 (.clk(clk), 
+                    .clk_enable(XLXN_277), 
+                    .reset(XLXN_278), 
+                    .RX_CLK(E_RX_CLK), 
+                    .RX_D(E_RXD[0:3]), 
+                    .RX_DV(E_RX_DV), 
+                    .RX_ER(E_RX_ER), 
+                    .BRAM_addr(XLXN_272[10:0]), 
+                    .BRAM_clk(XLXN_270), 
+                    .BRAM_data(XLXN_276[0:7]), 
+                    .BRAM_en(XLXN_271), 
+                    .ce_out(XLXN_269), 
+                    .read_ev(XLXN_401));
+   VCC  XLXI_67 (.P(XLXN_277));
+   GND  XLXI_68 (.G(XLXN_278));
+   GND  XLXI_69 (.G(E_TX_ER));
+   Timer10ms  XLXI_70 (.clk(clk), 
+                      .clk_enable(XLXN_441), 
+                      .reset(XLXN_716), 
+                      .ce_out(XLXN_326), 
+                      .ModelTick(XLXN_805));
+   VCC  XLXI_74 (.P(XLXN_441));
+   GND  XLXI_75 (.G(XLXN_716));
+   real_control  XLXI_78 (.addr(XLXN_709[11:0]), 
+                         .clk(clk), 
+                         .di(XLXN_710[31:0]), 
+                         .en(XLXN_376), 
+                         .we(XLXN_708), 
+                         .do(XLXN_734[31:0]));
+   VCC  XLXI_79 (.P(XLXN_376));
+   prog_mem  XLXI_80 (.addr(XLXN_705[11:0]), 
+                     .clk(clk), 
+                     .en(XLXN_376), 
+                     .do(XLXN_718[15:0]));
+   VCC  XLXI_95 (.P(XLXN_448));
+   contr1_conv  XLXI_148 (.adc1(XLXN_807[31:0]), 
+                         .adc2(XLXN_808[31:0]), 
+                         .BRAM_out(XLXN_743[7:0]), 
+                         .clk(clk), 
+                         .Data_RAM_in(XLXN_734[31:0]), 
+                         .FPU_Result(XLXN_762[31:0]), 
+                         .Instruction(XLXN_718[15:0]), 
+                         .Timer_ISR(XLXN_805), 
+                         .addr_outram(XLXN_741[13:0]), 
+                         .BRAM_addr(XLXN_737[10:0]), 
+                         .dac1(XLXN_786[31:0]), 
+                         .dac2(XLXN_787[31:0]), 
+                         .data_outram(XLXN_740[7:0]), 
+                         .Data_RAM(XLXN_710[31:0]), 
+                         .FPU_Op1(XLXN_760[31:0]), 
+                         .FPU_Op2(XLXN_761[31:0]), 
+                         .FPU_Op3(XLXN_763[31:0]), 
+                         .Instruction_address(XLXN_705[11:0]), 
+                         .RAM_Addr(XLXN_709[11:0]), 
+                         .select_mem(XLXN_736[3:0]), 
+                         .trig_pack(XLXN_706), 
+                         .write_outram(XLXN_739), 
+                         .Write_RAM(XLXN_708));
+   fp_wrapper  XLXI_150 (.A(XLXN_760[31:0]), 
+                        .ACC(XLXN_763[31:0]), 
+                        .B(XLXN_761[31:0]), 
+                        .C(XLXN_762[31:0]));
+   int2single  XLXI_161 (.sig_buf_i(XLXN_812[11:0]), 
+                        .sig(XLXN_807[31:0]));
+   ab_contr  XLXI_162 (.clk(clk), 
+                      .dac1(XLXN_814[11:0]), 
+                      .dac2(XLXN_815[11:0]), 
+                      .sdo(a_sdo), 
+                      .tick(XLXN_805), 
+                      .adc1(XLXN_812[11:0]), 
+                      .adc2(XLXN_810[11:0]), 
+                      .csl(a_cs[2:0]), 
+                      .sdi(a_sdi), 
+                      .spic(a_clk));
+   int2single  XLXI_163 (.sig_buf_i(XLXN_810[11:0]), 
+                        .sig(XLXN_808[31:0]));
+   single_int  XLXI_164 (.sigf(XLXN_786[31:0]), 
+                        .sigi(XLXN_814[11:0]));
+   single_int  XLXI_165 (.sigf(XLXN_787[31:0]), 
+                        .sigi(XLXN_815[11:0]));
+endmodule

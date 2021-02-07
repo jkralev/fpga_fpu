@@ -1,0 +1,3 @@
+MODULE main
+	SUBMODULE fpu
+		INSTANCE XLXI_1

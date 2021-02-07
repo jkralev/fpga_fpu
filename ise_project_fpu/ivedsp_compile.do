@@ -1,0 +1,12 @@
+vlib work
+vcom  ivedsp_pkg.vhd
+vcom  alpha12_bit_Program_Counter.vhd
+vcom  alpha32_bit_Acumulator_resource.vhd
+vcom  In_Port_Control.vhd
+vcom  Register_rsvd.vhd
+vcom  Register1.vhd
+vcom  Rise_detect.vhd
+vcom  Rise_detect1.vhd
+vcom  IN_OUT_Controller.vhd
+vcom  Instruction_Decoder.vhd
+vcom  ivedsp.vhd

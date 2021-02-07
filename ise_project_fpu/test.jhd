@@ -1,0 +1,3 @@
+MODULE test
+	SUBMODULE ss_controller
+		INSTANCE XLXI_60

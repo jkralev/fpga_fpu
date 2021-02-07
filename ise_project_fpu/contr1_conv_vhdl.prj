@@ -1,0 +1,8 @@
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\ivedsp_pkg.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\Instruction_Decoder.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\input_output_controller.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\alpha32_bit_Acumulator_resource.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\alpha12_bit_Program_Counter.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\ivedsp.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\contr1_pkg.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\contr1_conv.vhd"

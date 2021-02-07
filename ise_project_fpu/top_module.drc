@@ -1,0 +1,26 @@
+Release 13.1 Drc O.40d (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Thu Mar 26 18:11:15 2015
+
+drc -z Top_Module.ncd Top_Module.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net XLXI_162/clk100 is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   XLXI_162/spi_program_not0000 is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA5> on
+   block:<XLXI_78/Mram_RAM4.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA6> on
+   block:<XLXI_78/Mram_RAM4.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA7> on
+   block:<XLXI_78/Mram_RAM4.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:367 - The signal <XLXI_5/u_Transmit/GLOBAL_LOGIC1> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <XLXI_66/u_Receive/GLOBAL_LOGIC1> is
+   incomplete. The signal does not drive any load pins in the design.
+DRC detected 0 errors and 7 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

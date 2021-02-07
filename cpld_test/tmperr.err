@@ -1,0 +1,7 @@
+ERROR:Cpld:848 - Insufficient number of output pins.  This design needs at least
+   41 but only 33 left after allocating other resources.
+ERROR:Cpld:29 - Device XC2C64A-5-VQ44 was disqualified.
+ERROR:Cpld:30 - The design requires too many resources to fit in any of the
+   specified devices.
+ERROR:Cpld:868 - Cannot fit the design into any of the specified devices with
+   the selected implementation options.

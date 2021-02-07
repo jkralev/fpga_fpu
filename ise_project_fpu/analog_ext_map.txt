@@ -1,0 +1,6 @@
+ --> analog_ext_pkg
+analog_ext/Enabled Subsystem --> Enabled_Subsystem
+analog_ext/Output_register --> Output_register
+analog_ext/Int to Single1 --> Int_to_Single1
+analog_ext/Single to Uint --> Single_to_Uint
+analog_ext --> analog_ext

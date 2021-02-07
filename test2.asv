@@ -1,0 +1,24 @@
+//get inputs 
+IN 1
+SACC 3
+//x(k)=x(k-1) 
+LACC 2
+SACC 1
+//y=C*x(k)+D*u(k) 
+//y1
+RMI
+LACC 1
+//MAC 5
+//SMS 4
+//x(k+1)=A*x(k)+B*u(k) 
+//x1
+//RMI
+//LACC 1
+//MAC 6
+//LACC 3
+//MAC 7
+//SMS 2
+//put outputs 
+LACC 4
+OUT 1
+JMP

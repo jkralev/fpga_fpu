@@ -1,0 +1,9 @@
+sch2verilog -intstyle ise -family xbr   -w "D:/Dan/FPGA_FPU/cpld_test/main.sch" main.vf
+xst -ise "D:/Dan/FPGA_FPU/cpld_test/cpld_test" -intstyle ise -ifn main.xst -ofn main.syr
+ngdbuild -ise "D:/Dan/FPGA_FPU/cpld_test/cpld_test" -intstyle ise -dd _ngo -i -p xbr main.ngc main.ngd
+sch2verilog -intstyle ise -family xbr   -w "D:/Dan/FPGA_FPU/cpld_test/main.sch" main.vf
+xst -ise "D:/Dan/FPGA_FPU/cpld_test/cpld_test" -intstyle ise -ifn main.xst -ofn main.syr
+ngdbuild -ise "D:/Dan/FPGA_FPU/cpld_test/cpld_test" -intstyle ise -dd _ngo -uc main.ucf -p xbr main.ngc main.ngd
+ngdbuild -ise "D:/Dan/FPGA_FPU/cpld_test/cpld_test" -intstyle ise -dd _ngo -uc main.ucf -p xbr main.ngc main.ngd
+cpldfit -ise "D:/Dan/FPGA_FPU/cpld_test/cpld_test" -intstyle ise -p xc2c64a-5-VQ44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -inreg on -blkfanin 38 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 main.ngd
+XSLTProcess -ise "D:/Dan/FPGA_FPU/cpld_test/cpld_test" main_build.xml

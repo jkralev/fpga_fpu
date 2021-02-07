@@ -1,0 +1,41 @@
+//get inputs 
+//RMI
+//IN 1
+//MAC 38
+//IN 10
+//MAC 36
+//SMS 32
+//LACC 32
+//OUT 1
+//RMI
+//IN 2
+//MAC 38
+//IN 11
+//MAC 36
+//SMS 33
+//LACC 33
+//OUT 2
+IN 1
+SACC 32
+IN 2
+SACC 33
+//put outputs 
+RMI
+LACC 34
+MAC 37
+SMS 34
+LACC 34
+OUT 10
+OUT 1
+RMI
+LACC 35
+MAC 37
+SMS 35
+LACC 35
+OUT 11
+OUT 2
+IN 10
+OUT 3
+IN 11
+OUT 4
+JMP

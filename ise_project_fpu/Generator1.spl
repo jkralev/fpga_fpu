@@ -1,0 +1,11 @@
+[Inputs]
+clk
+reset
+clk_enable
+event_r
+send
+[Outputs]
+ce_out
+out_event
+res_tr
+[BiDir]

@@ -1,0 +1,11 @@
+ --> ivedsp_pkg
+ivedsp/12 bit Program Counter --> alpha12_bit_Program_Counter
+ivedsp/32 bit Acumulator resource --> alpha32_bit_Acumulator_resource
+ivedsp/IN_OUT_Controller/In_Port_Control --> In_Port_Control
+ivedsp/IN_OUT_Controller/Register --> Register_rsvd
+ivedsp/IN_OUT_Controller/Register1 --> Register1
+ivedsp/IN_OUT_Controller/Rise_detect --> Rise_detect
+ivedsp/IN_OUT_Controller/Rise_detect1 --> Rise_detect1
+ivedsp/IN_OUT_Controller --> IN_OUT_Controller
+ivedsp/Instruction Decoder --> Instruction_Decoder
+ivedsp --> ivedsp

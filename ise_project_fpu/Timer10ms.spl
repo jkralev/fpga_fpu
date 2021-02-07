@@ -1,0 +1,8 @@
+[Inputs]
+clk
+reset
+clk_enable
+[Outputs]
+ce_out
+ModelTick
+[BiDir]

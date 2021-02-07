@@ -1,0 +1,7 @@
+function y=single2bits(u)
+b_single=single(u)
+if u<0
+    y=uint32(2^32+u*2^16);
+else
+    y=uint32(u*2^16);
+end

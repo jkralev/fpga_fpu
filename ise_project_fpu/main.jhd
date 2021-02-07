@@ -1,0 +1,3 @@
+MODULE main
+	SUBMODULE waveform_formation
+		INSTANCE XLXI_21

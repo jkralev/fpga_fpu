@@ -1,0 +1,7 @@
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\analog_mod_pkg.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\Subsystem.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\Handle_Timer_Event.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\DAC_Init.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\Convert_Integer_to_Single.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\analog_mod.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\analog_wrap.vhd"

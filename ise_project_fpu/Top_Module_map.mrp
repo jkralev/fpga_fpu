@@ -1,0 +1,401 @@
+Release 13.1 Map O.40d (nt64)
+Xilinx Mapping Report File for Design 'Top_Module'
+
+Design Information
+------------------
+Command Line   : map -filter iseconfig/filter.filter -intstyle ise -p
+xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o Top_Module_map.ncd
+Top_Module.ngd Top_Module.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Thu Mar 26 18:08:42 2015
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   20
+Logic Utilization:
+  Number of Slice Flip Flops:           571 out of   9,312    6%
+  Number of 4 input LUTs:             5,033 out of   9,312   54%
+Logic Distribution:
+  Number of occupied Slices:          2,854 out of   4,656   61%
+    Number of Slices containing only related logic:   2,854 out of   2,854 100%
+    Number of Slices containing unrelated logic:          0 out of   2,854   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       5,196 out of   9,312   55%
+    Number used as logic:             5,032
+    Number used as a route-thru:        163
+    Number used as Shift registers:       1
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 28 out of     232   12%
+  Number of RAMB16s:                     14 out of      20   70%
+  Number of BUFGMUXs:                     2 out of      24    8%
+  Number of MULT18X18SIOs:                4 out of      20   20%
+
+Average Fanout of Non-Clock Nets:                3.70
+
+Peak Memory Usage:  272 MB
+Total REAL time to MAP completion:  7 secs 
+Total CPU time to MAP completion:   7 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+WARNING:MapLib:328 - Block XLXI_66/u_4bit2uint8 is not a recognized logical
+   block. The mapper will continue to process the design but there may be design
+   problems if this block does not get trimmed.
+WARNING:MapLib:328 - Block XLXI_66/u_int2bit is not a recognized logical block.
+   The mapper will continue to process the design but there may be design
+   problems if this block does not get trimmed.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_sum/exp1_out1<17>1
+   failed to merge with F5 multiplexer
+   XLXI_150/u_fp_sum/u_Normalize/y_tmp<18>1263_SW0_SW0.  Two or more symbols
+   belong to different KEEP_HIERARCHY boundaries and can not be merged into the
+   same component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_148/u_ivedsp/Switch_out1<0>1
+   failed to merge with F5 multiplexer
+   XLXI_148/u_ivedsp/u_12_bit_Program_Counter/new_addr<0>_f5.  Two or more
+   symbols belong to different KEEP_HIERARCHY boundaries and can not be merged
+   into the same component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_mul/Gain2_out1<43>1
+   failed to merge with F5 multiplexer
+   XLXI_150/u_fp_mul/u_Normalize_mul/y_tmp<4>968_SW1.  Two or more symbols
+   belong to different KEEP_HIERARCHY boundaries and can not be merged into the
+   same component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_mul/Gain2_out1<43>1
+   failed to merge with F5 multiplexer
+   XLXI_150/u_fp_mul/u_Normalize_mul/y_tmp<6>947_SW1.  Two or more symbols
+   belong to different KEEP_HIERARCHY boundaries and can not be merged into the
+   same component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_sum/exp1_out1<5>1 failed
+   to merge with F5 multiplexer XLXI_150/u_fp_sum/u_Normalize/y_tmp<19>536.  Two
+   or more symbols belong to different KEEP_HIERARCHY boundaries and can not be
+   merged into the same component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_sum/exp1_out1<24>1
+   failed to merge with F5 multiplexer
+   XLXI_150/u_fp_sum/u_Normalize/de_tmp<3>82_SW0.  Two or more symbols belong to
+   different KEEP_HIERARCHY boundaries and can not be merged into the same
+   component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_mul/Gain2_out1<39>1
+   failed to merge with F5 multiplexer
+   XLXI_150/u_fp_mul/u_Normalize_mul/de_tmp<1>120_SW0.  Two or more symbols
+   belong to different KEEP_HIERARCHY boundaries and can not be merged into the
+   same component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_mul/Gain2_out1<47>1
+   failed to merge with F5 multiplexer
+   XLXI_150/u_fp_mul/u_Normalize_mul/de_tmp<2>114_SW2.  Two or more symbols
+   belong to different KEEP_HIERARCHY boundaries and can not be merged into the
+   same component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_mul/Gain2_out1<43>1
+   failed to merge with F5 multiplexer
+   XLXI_150/u_fp_mul/u_Normalize_mul/y_tmp<10>932_SW1.  Two or more symbols
+   belong to different KEEP_HIERARCHY boundaries and can not be merged into the
+   same component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_mul/Gain2_out1<20>1
+   failed to merge with F5 multiplexer
+   XLXI_150/u_fp_mul/u_Normalize_mul/y_tmp<0>992_SW1_SW0_f5.  Two or more
+   symbols belong to different KEEP_HIERARCHY boundaries and can not be merged
+   into the same component.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator XLXI_150/u_fp_mul/Gain2_out1<43>1
+   failed to merge with F5 multiplexer
+   XLXI_150/u_fp_mul/u_Normalize_mul/y_tmp<13>932_SW1.  Two or more symbols
+   belong to different KEEP_HIERARCHY boundaries and can not be merged into the
+   same component.  The design will exhibit suboptimal timing.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net XLXI_162/clk100 is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   XLXI_162/spi_program_not0000 is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA5> on
+   block:<XLXI_78/Mram_RAM4.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA6> on
+   block:<XLXI_78/Mram_RAM4.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOA7> on
+   block:<XLXI_78/Mram_RAM4.A>:<RAMB16_RAMB16A>.
+WARNING:PhysDesignRules:367 - The signal <XLXI_5/u_Transmit/GLOBAL_LOGIC1> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <XLXI_66/u_Receive/GLOBAL_LOGIC1> is
+   incomplete. The signal does not drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:Security:54 - 'xc3s500e' is a WebPack part.
+INFO:Map:113 - input buffer 'E_RXD_0_IBUF' driving design level port 'E_RXD<0>'
+   is being pushed into module 'XLXI_66' to enable I/O register usage. The
+   buffer has been renamed as 'XLXI_66/E_RXD_0_IBUF'.
+INFO:Map:113 - input buffer 'E_RXD_1_IBUF' driving design level port 'E_RXD<1>'
+   is being pushed into module 'XLXI_66' to enable I/O register usage. The
+   buffer has been renamed as 'XLXI_66/E_RXD_1_IBUF'.
+INFO:Map:113 - input buffer 'E_RXD_2_IBUF' driving design level port 'E_RXD<2>'
+   is being pushed into module 'XLXI_66' to enable I/O register usage. The
+   buffer has been renamed as 'XLXI_66/E_RXD_2_IBUF'.
+INFO:Map:113 - input buffer 'E_RXD_3_IBUF' driving design level port 'E_RXD<3>'
+   is being pushed into module 'XLXI_66' to enable I/O register usage. The
+   buffer has been renamed as 'XLXI_66/E_RXD_3_IBUF'.
+INFO:Map:113 - input buffer 'E_RX_CLK_IBUF' driving design level port 'E_RX_CLK'
+   is being pushed into module 'XLXI_66' to enable I/O register usage. The
+   buffer has been renamed as 'XLXI_66/E_RX_CLK_IBUF'.
+INFO:Map:113 - input buffer 'E_RX_DV_IBUF' driving design level port 'E_RX_DV'
+   is being pushed into module 'XLXI_66' to enable I/O register usage. The
+   buffer has been renamed as 'XLXI_66/E_RX_DV_IBUF'.
+INFO:Map:113 - input buffer 'E_RX_ER_IBUF' driving design level port 'E_RX_ER'
+   is being pushed into module 'XLXI_66' to enable I/O register usage. The
+   buffer has been renamed as 'XLXI_66/E_RX_ER_IBUF'.
+INFO:Map:113 - input buffer 'E_TX_CLK_IBUF' driving design level port 'E_TX_CLK'
+   is being pushed into module 'XLXI_5' to enable I/O register usage. The buffer
+   has been renamed as 'XLXI_5/E_TX_CLK_IBUF'.
+INFO:Map:110 - output buffer 'a_cs_0_OBUF' driving design level port 'a_cs<0>'
+   is being pushed into module 'XLXI_162' to enable I/O register usage. The
+   buffer has been renamed as 'XLXI_162/a_cs_0_OBUF'.
+INFO:Map:110 - output buffer 'a_cs_1_OBUF' driving design level port 'a_cs<1>'
+   is being pushed into module 'XLXI_162' to enable I/O register usage. The
+   buffer has been renamed as 'XLXI_162/a_cs_1_OBUF'.
+INFO:Map:110 - output buffer 'a_cs_2_OBUF' driving design level port 'a_cs<2>'
+   is being pushed into module 'XLXI_162' to enable I/O register usage. The
+   buffer has been renamed as 'XLXI_162/a_cs_2_OBUF'.
+INFO:Map:110 - output buffer 'a_sdi_OBUF' driving design level port 'a_sdi' is
+   being pushed into module 'XLXI_162' to enable I/O register usage. The buffer
+   has been renamed as 'XLXI_162/a_sdi_OBUF'.
+INFO:LIT:243 - Logical network XLXN_705<10> has no load.
+INFO:LIT:395 - The above info message is repeated 37 more times for the
+   following (max. 5 shown):
+   XLXN_705<11>,
+   XLXN_709<11>,
+   XLXN_718<11>,
+   XLXN_736<0>,
+   XLXN_736<1>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  38 block(s) optimized away
+  39 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "XLXI_66/alpha4bit2uint8_out1<4>" is sourceless and has been removed.
+The signal "XLXI_66/alpha4bit2uint8_out1<5>" is sourceless and has been removed.
+The signal "XLXI_66/alpha4bit2uint8_out1<6>" is sourceless and has been removed.
+The signal "XLXI_66/alpha4bit2uint8_out1<7>" is sourceless and has been removed.
+The signal "XLXI_150/buf_a_frac<23>" is sourceless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "XLXN_705<10>" is unused and has been removed.
+The signal "XLXN_705<11>" is unused and has been removed.
+The signal "XLXN_709<11>" is unused and has been removed.
+The signal "XLXN_718<11>" is unused and has been removed.
+The signal "XLXN_736<0>" is unused and has been removed.
+The signal "XLXN_736<1>" is unused and has been removed.
+The signal "XLXN_736<2>" is unused and has been removed.
+The signal "XLXN_736<3>" is unused and has been removed.
+The signal "XLXN_807<0>" is unused and has been removed.
+The signal "XLXN_807<10>" is unused and has been removed.
+The signal "XLXN_807<11>" is unused and has been removed.
+The signal "XLXN_807<1>" is unused and has been removed.
+The signal "XLXN_807<2>" is unused and has been removed.
+The signal "XLXN_807<31>" is unused and has been removed.
+The signal "XLXN_807<3>" is unused and has been removed.
+The signal "XLXN_807<4>" is unused and has been removed.
+The signal "XLXN_807<5>" is unused and has been removed.
+The signal "XLXN_807<6>" is unused and has been removed.
+The signal "XLXN_807<7>" is unused and has been removed.
+The signal "XLXN_807<8>" is unused and has been removed.
+The signal "XLXN_807<9>" is unused and has been removed.
+The signal "XLXN_808<0>" is unused and has been removed.
+The signal "XLXN_808<10>" is unused and has been removed.
+The signal "XLXN_808<11>" is unused and has been removed.
+The signal "XLXN_808<1>" is unused and has been removed.
+The signal "XLXN_808<2>" is unused and has been removed.
+The signal "XLXN_808<31>" is unused and has been removed.
+The signal "XLXN_808<3>" is unused and has been removed.
+The signal "XLXN_808<4>" is unused and has been removed.
+The signal "XLXN_808<5>" is unused and has been removed.
+The signal "XLXN_808<6>" is unused and has been removed.
+The signal "XLXN_808<7>" is unused and has been removed.
+The signal "XLXN_808<8>" is unused and has been removed.
+The signal "XLXN_808<9>" is unused and has been removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XLXI_75
+VCC 		XLXI_95
+GND 		XLXI_148/u_ivedsp/XST_GND
+GND 		XLXI_148/u_ivedsp/u_12_bit_Program_Counter/XST_GND
+GND 		XLXI_148/u_ivedsp/u_IN_OUT_Controller/XST_GND
+VCC 		XLXI_150/XST_VCC
+GND 		XLXI_150/u_fp_mul/XST_GND
+VCC 		XLXI_150/u_fp_mul/XST_VCC
+GND 		XLXI_150/u_fp_mul/u_Normalize_mul/XST_GND
+VCC 		XLXI_150/u_fp_mul/u_Normalize_mul/XST_VCC
+GND 		XLXI_150/u_fp_sum/XST_GND
+VCC 		XLXI_150/u_fp_sum/XST_VCC
+VCC 		XLXI_150/u_fp_sum/u_Normalize/XST_VCC
+GND 		XLXI_161/u_Int_to_Single1/XST_GND
+GND 		XLXI_162/clock1/XST_GND
+VCC 		XLXI_162/clock1/XST_VCC
+GND 		XLXI_162/conter1/XST_GND
+VCC 		XLXI_162/conter1/XST_VCC
+GND 		XLXI_163/u_Int_to_Single1/XST_GND
+VCC 		XLXI_164/u_Single_to_Int/XST_VCC
+VCC 		XLXI_165/u_Single_to_Int/XST_VCC
+GND 		XLXI_5/u_Transmit/XST_GND
+VCC 		XLXI_5/u_Transmit/XST_VCC
+GND 		XLXI_53/u_Gen_Imp/XST_GND
+VCC 		XLXI_53/u_Gen_Imp/XST_VCC
+GND 		XLXI_55/XST_GND
+VCC 		XLXI_55/XST_VCC
+GND 		XLXI_56/XST_GND
+VCC 		XLXI_56/XST_VCC
+GND 		XLXI_62/XST_GND
+VCC 		XLXI_62/XST_VCC
+GND 		XLXI_66/u_Receive/XST_GND
+VCC 		XLXI_66/u_Receive/XST_VCC
+GND 		XLXI_70/XST_GND
+VCC 		XLXI_70/XST_VCC
+GND 		XLXI_78/XST_GND
+GND 		XLXI_80/XST_GND
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| E_RXD<0>                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| E_RXD<1>                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| E_RXD<2>                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| E_RXD<3>                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| E_RX_CLK                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| E_RX_DV                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| E_RX_ER                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| E_TXD<0>                           | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
+| E_TXD<1>                           | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
+| E_TXD<2>                           | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
+| E_TXD<3>                           | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
+| E_TX_CLK                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| E_TX_EN                            | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
+| E_TX_ER                            | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
+| XLXN_179                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| XLXN_184                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| XLXN_269                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| XLXN_270                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| XLXN_326                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| XLXN_401                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| a_clk                              | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW |              |          | 0 / 0    |
+| a_cs<0>                            | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW |              |          | 0 / 0    |
+| a_cs<1>                            | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW |              |          | 0 / 0    |
+| a_cs<2>                            | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW |              |          | 0 / 0    |
+| a_sdi                              | IOB              | OUTPUT    | LVTTL                |       | 6        | SLOW |              |          | 0 / 0    |
+| a_sdo                              | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
+| clk                                | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| led0                               | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

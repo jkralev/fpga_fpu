@@ -1,0 +1,6 @@
+vhdtdtfi -lib work shift_reg_test.vhd -lib work gen_tick.vhd -lib work counter_test.vhd -lib work ab_contr.vhd -prj ise_project_1 -o ab_contr.spl -module ab_contr -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ab_contr.spl D:/Dan/FPGA_FPU/ise_project_fpu/ab_contr.sym 
+vhdtdtfi -lib work shift_reg_test.vhd -lib work gen_tick.vhd -lib work counter_test.vhd -lib work ab_contr.vhd -prj ise_project_1 -o ab_contr.spl -module ab_contr -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ab_contr.spl D:/Dan/FPGA_FPU/ise_project_fpu/ab_contr.sym 
+vhdtdtfi -lib work shift_reg_test.vhd -lib work shift_reg_out.vhd -lib work gen_tick.vhd -lib work counter_test.vhd -lib work ab_contr.vhd -prj ise_project_1 -o ab_contr.spl -module ab_contr -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w ab_contr.spl D:/Dan/FPGA_FPU/ise_project_fpu/ab_contr.sym 

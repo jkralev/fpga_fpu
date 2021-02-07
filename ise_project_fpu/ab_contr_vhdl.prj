@@ -1,0 +1,6 @@
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\spi_rom.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\shift_reg_test.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\shift_reg_out.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\gen_tick.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\counter_test.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\ab_contr.vhd"

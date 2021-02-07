@@ -1,0 +1,6 @@
+vhdtdtfi -lib work fp_sum_pkg.vhd -lib work Variable_bitshift.vhd -lib work Normalize.vhd -lib work fp_sum.vhd -lib work fp_wrapper.vhd -prj ise_project_1 -o fp_wrapper.spl -module fp_wrapper -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e fp_wrapper.spl D:/Dan/FPGA_FPU/ise_project_fpu/fp_wrapper.sym 
+vhdtdtfi -lib work fp_sum_pkg.vhd -lib work Variable_bitshift.vhd -lib work Normalize.vhd -lib work fp_sum.vhd -lib work fp_wrapper.vhd -prj ise_project_1 -o fp_wrapper.spl -module fp_wrapper -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e fp_wrapper.spl D:/Dan/FPGA_FPU/ise_project_fpu/fp_wrapper.sym 
+vhdtdtfi -lib work fp_mul_pkg.vhd -lib work Variable_bitshift.vhd -lib work Normalize.vhd -lib work fp_sum.vhd -lib work fp_mul.vhd -lib work fp_wrapper.vhd -prj ise_project_1 -o fp_wrapper.spl -module fp_wrapper -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e fp_wrapper.spl D:/Dan/FPGA_FPU/ise_project_fpu/fp_wrapper.sym 

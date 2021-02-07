@@ -1,0 +1,57 @@
+//get inputs 
+RMI
+IN 1
+MAC 10
+IN 10
+MAC 6
+LACC 7
+MAC 6
+SMS 4
+LACC 4
+OUT 3
+//x(k)=x(k-1) 
+LACC 2
+SACC 0
+LACC 3
+SACC 1
+//y=C*x(k)+D*u(k) 
+//y1
+RMI
+LACC 0
+MAC 12
+LACC 1
+MAC 13
+LACC 4
+MAC 14
+SMS 5
+//x(k+1)=A*x(k)+B*u(k) 
+//x1
+RMI
+LACC 0
+MAC 15
+LACC 1
+MAC 16
+LACC 4
+MAC 17
+SMS 2
+//x2
+RMI
+LACC 0
+MAC 18
+LACC 1
+MAC 19
+LACC 4
+MAC 20
+SMS 3
+//put outputs 
+LACC 5
+OUT 1
+RMI
+LACC 5
+MAC 8
+LACC 9
+MAC 10
+SMS 5
+LACC 5
+OUT 10
+JMP

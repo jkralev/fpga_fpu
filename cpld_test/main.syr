@@ -1,0 +1,949 @@
+Release 8.1i - xst I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.69 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.69 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+     5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : CoolRunner2 CPLDs
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : YES
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+
+---- Other Options
+lso                                : main.lso
+verilog2001                        : YES
+safe_implementation                : No
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Dan/FPGA_FPU/cpld_test/fpupack.vhd" in Library work.
+Architecture fpupack of Entity fpupack is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/cpld_test/comppack.vhd" in Library work.
+Compiling vhdl file "D:/Dan/FPGA_FPU/cpld_test/pre_norm_addsub.vhd" in Library work.
+Architecture rtl of Entity pre_norm_addsub is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/cpld_test/addsub_28.vhd" in Library work.
+Architecture rtl of Entity addsub_28 is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/cpld_test/post_norm_addsub.vhd" in Library work.
+Architecture rtl of Entity post_norm_addsub is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/cpld_test/pre_norm_mul.vhd" in Library work.
+Architecture rtl of Entity pre_norm_mul is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/cpld_test/mul_24.vhd" in Library work.
+Architecture rtl of Entity mul_24 is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/cpld_test/post_norm_mul.vhd" in Library work.
+Architecture rtl of Entity post_norm_mul is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/cpld_test/fpu.vhd" in Library work.
+Architecture rtl of Entity fpu is up to date.
+Compiling verilog file "main.vf" in library work
+Module <main> compiled
+No errors in compilation
+Analysis of file <"main.prj"> succeeded.
+ 
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <main>.
+Module <main> is correct for synthesis.
+ 
+Analyzing Entity <fpu> (Architecture <rtl>).
+WARNING:Xst:753 - "D:/Dan/FPGA_FPU/cpld_test/fpu.vhd" line 227: Unconnected output port 'ready_o' of component 'mul_24'.
+Entity <fpu> analyzed. Unit <fpu> generated.
+
+Analyzing Entity <pre_norm_addsub> (Architecture <rtl>).
+INFO:Xst:1561 - "D:/Dan/FPGA_FPU/cpld_test/pre_norm_addsub.vhd" line 128: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "D:/Dan/FPGA_FPU/cpld_test/pre_norm_addsub.vhd" line 148: Mux is complete : default of case is discarded
+Entity <pre_norm_addsub> analyzed. Unit <pre_norm_addsub> generated.
+
+Analyzing Entity <addsub_28> (Architecture <rtl>).
+Entity <addsub_28> analyzed. Unit <addsub_28> generated.
+
+Analyzing Entity <post_norm_addsub> (Architecture <rtl>).
+Entity <post_norm_addsub> analyzed. Unit <post_norm_addsub> generated.
+
+Analyzing Entity <pre_norm_mul> (Architecture <rtl>).
+Entity <pre_norm_mul> analyzed. Unit <pre_norm_mul> generated.
+
+Analyzing Entity <mul_24> (Architecture <rtl>).
+Entity <mul_24> analyzed. Unit <mul_24> generated.
+
+Analyzing Entity <post_norm_mul> (Architecture <rtl>).
+Entity <post_norm_mul> analyzed. Unit <post_norm_mul> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <post_norm_mul>.
+    Related source file is "D:/Dan/FPGA_FPU/cpld_test/post_norm_mul.vhd".
+WARNING:Xst:646 - Signal <s_opa_i<31>> is assigned but never used.
+WARNING:Xst:646 - Signal <s_opb_i<31>> is assigned but never used.
+WARNING:Xst:646 - Signal <s_frac3<24:23>> is assigned but never used.
+    Found 32-bit register for signal <output_o>.
+    Found 1-bit register for signal <ine_o>.
+    Found 6-bit adder for signal <$n0115> created at line 90.
+    Found 6-bit adder for signal <$n0116> created at line 90.
+    Found 6-bit adder for signal <$n0117> created at line 90.
+    Found 6-bit adder for signal <$n0118> created at line 90.
+    Found 6-bit adder for signal <$n0119> created at line 90.
+    Found 6-bit adder for signal <$n0120> created at line 90.
+    Found 6-bit adder for signal <$n0121> created at line 90.
+    Found 6-bit adder for signal <$n0122> created at line 90.
+    Found 6-bit adder for signal <$n0123> created at line 90.
+    Found 6-bit adder for signal <$n0124> created at line 90.
+    Found 6-bit adder for signal <$n0125> created at line 90.
+    Found 6-bit adder for signal <$n0126> created at line 90.
+    Found 6-bit adder for signal <$n0127> created at line 90.
+    Found 6-bit adder for signal <$n0128> created at line 90.
+    Found 6-bit adder for signal <$n0129> created at line 90.
+    Found 6-bit adder for signal <$n0130> created at line 90.
+    Found 6-bit adder for signal <$n0131> created at line 90.
+    Found 6-bit adder for signal <$n0132> created at line 90.
+    Found 6-bit adder for signal <$n0133> created at line 90.
+    Found 6-bit adder for signal <$n0134> created at line 90.
+    Found 6-bit adder for signal <$n0135> created at line 90.
+    Found 6-bit adder for signal <$n0136> created at line 90.
+    Found 6-bit adder for signal <$n0137> created at line 90.
+    Found 6-bit adder for signal <$n0138> created at line 90.
+    Found 6-bit adder for signal <$n0139> created at line 90.
+    Found 6-bit adder for signal <$n0140> created at line 90.
+    Found 6-bit adder for signal <$n0141> created at line 90.
+    Found 6-bit adder for signal <$n0142> created at line 90.
+    Found 6-bit adder for signal <$n0143> created at line 90.
+    Found 6-bit adder for signal <$n0144> created at line 90.
+    Found 6-bit adder for signal <$n0145> created at line 90.
+    Found 6-bit adder for signal <$n0146> created at line 90.
+    Found 6-bit adder for signal <$n0147> created at line 90.
+    Found 6-bit adder for signal <$n0148> created at line 90.
+    Found 6-bit adder for signal <$n0149> created at line 90.
+    Found 6-bit adder for signal <$n0150> created at line 90.
+    Found 6-bit adder for signal <$n0151> created at line 90.
+    Found 6-bit adder for signal <$n0152> created at line 90.
+    Found 6-bit adder for signal <$n0153> created at line 90.
+    Found 6-bit adder for signal <$n0154> created at line 90.
+    Found 6-bit adder for signal <$n0155> created at line 90.
+    Found 6-bit adder for signal <$n0156> created at line 90.
+    Found 6-bit adder for signal <$n0157> created at line 90.
+    Found 6-bit adder for signal <$n0158> created at line 90.
+    Found 6-bit adder for signal <$n0159> created at line 105.
+    Found 6-bit adder for signal <$n0160> created at line 105.
+    Found 6-bit adder for signal <$n0161> created at line 105.
+    Found 6-bit adder for signal <$n0162> created at line 105.
+    Found 6-bit adder for signal <$n0163> created at line 105.
+    Found 6-bit adder for signal <$n0164> created at line 105.
+    Found 6-bit adder for signal <$n0165> created at line 105.
+    Found 6-bit adder for signal <$n0166> created at line 105.
+    Found 6-bit adder for signal <$n0167> created at line 105.
+    Found 6-bit adder for signal <$n0168> created at line 105.
+    Found 6-bit adder for signal <$n0169> created at line 105.
+    Found 6-bit adder for signal <$n0170> created at line 105.
+    Found 6-bit adder for signal <$n0171> created at line 105.
+    Found 6-bit adder for signal <$n0172> created at line 105.
+    Found 6-bit adder for signal <$n0173> created at line 105.
+    Found 6-bit adder for signal <$n0174> created at line 105.
+    Found 6-bit adder for signal <$n0175> created at line 105.
+    Found 6-bit adder for signal <$n0176> created at line 105.
+    Found 6-bit adder for signal <$n0177> created at line 105.
+    Found 6-bit adder for signal <$n0178> created at line 105.
+    Found 6-bit adder for signal <$n0179> created at line 105.
+    Found 6-bit adder for signal <$n0180> created at line 105.
+    Found 6-bit adder for signal <$n0181> created at line 105.
+    Found 6-bit adder for signal <$n0182> created at line 105.
+    Found 6-bit adder for signal <$n0183> created at line 105.
+    Found 6-bit adder for signal <$n0184> created at line 105.
+    Found 6-bit adder for signal <$n0185> created at line 105.
+    Found 6-bit adder for signal <$n0186> created at line 105.
+    Found 6-bit adder for signal <$n0187> created at line 105.
+    Found 6-bit adder for signal <$n0188> created at line 105.
+    Found 6-bit adder for signal <$n0189> created at line 105.
+    Found 6-bit adder for signal <$n0190> created at line 105.
+    Found 6-bit adder for signal <$n0191> created at line 105.
+    Found 6-bit adder for signal <$n0192> created at line 105.
+    Found 6-bit adder for signal <$n0193> created at line 105.
+    Found 6-bit adder for signal <$n0194> created at line 105.
+    Found 6-bit adder for signal <$n0195> created at line 105.
+    Found 6-bit adder for signal <$n0196> created at line 105.
+    Found 6-bit adder for signal <$n0197> created at line 105.
+    Found 6-bit adder for signal <$n0198> created at line 105.
+    Found 6-bit adder for signal <$n0199> created at line 105.
+    Found 6-bit adder for signal <$n0200> created at line 105.
+    Found 6-bit adder for signal <$n0201> created at line 105.
+    Found 6-bit adder for signal <$n0202> created at line 105.
+    Found 6-bit adder for signal <$n0203> created at line 105.
+    Found 6-bit adder for signal <$n0204> created at line 105.
+    Found 48-bit shifter logical right for signal <$n0205> created at line 185.
+    Found 48-bit shifter logical left for signal <$n0206> created at line 187.
+    Found 10-bit adder for signal <$n0207> created at line 148.
+    Found 10-bit adder for signal <$n0208> created at line 148.
+    Found 10-bit subtractor for signal <$n0209> created at line 154.
+    Found 6-bit adder for signal <$n0210> created at line 197.
+    Found 9-bit adder for signal <$n0211> created at line 233.
+    Found 9-bit subtractor for signal <$n0212> created at line 192.
+    Found 6-bit adder for signal <$n0213> created at line 90.
+    Found 6-bit adder for signal <$n0214> created at line 105.
+    Found 25-bit adder for signal <$n0215> created at line 222.
+    Found 6-bit comparator greater for signal <$n0226> created at line 197.
+    Found 10-bit register for signal <s_exp_10_i>.
+    Found 10-bit adder for signal <s_exp_10a>.
+    Found 10-bit subtractor for signal <s_exp_10b>.
+    Found 8-bit register for signal <s_expa>.
+    Found 8-bit register for signal <s_expb>.
+    Found 9-bit register for signal <s_expo1>.
+    Found 48-bit register for signal <s_frac2a>.
+    Found 25-bit register for signal <s_frac_rnd>.
+    Found 48-bit register for signal <s_fract_48_i>.
+    Found 32-bit register for signal <s_opa_i>.
+    Found 32-bit register for signal <s_opb_i>.
+    Found 6-bit register for signal <s_r_zeros>.
+    Found 2-bit register for signal <s_rmode_i>.
+    Found 6-bit register for signal <s_shl2>.
+    Found 6-bit register for signal <s_shr2>.
+    Found 1-bit register for signal <s_sign_i>.
+    Found 6-bit register for signal <s_zeros>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred 101 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <post_norm_mul> synthesized.
+
+
+Synthesizing Unit <mul_24>.
+    Related source file is "D:/Dan/FPGA_FPU/cpld_test/mul_24.vhd".
+    Found 1-bit 4-to-1 multiplexer for signal <$n0000<0>>.
+    Found 1-bit 4-to-1 multiplexer for signal <$n0001<0>>.
+    Found 1-bit 4-to-1 multiplexer for signal <$n0002<0>>.
+    Found 1-bit 4-to-1 multiplexer for signal <$n0003<0>>.
+    Found 1-bit 4-to-1 multiplexer for signal <$n0004<0>>.
+    Found 1-bit 4-to-1 multiplexer for signal <$n0005<0>>.
+    Found 1-bit 4-to-1 multiplexer for signal <$n0006<0>>.
+    Found 1-bit 4-to-1 multiplexer for signal <$n0007<0>>.
+    Found 6x6-bit multiplier for signal <$n0008> created at line 194.
+    Found 6x6-bit multiplier for signal <$n0009> created at line 195.
+    Found 6x6-bit multiplier for signal <$n0010> created at line 196.
+    Found 6x6-bit multiplier for signal <$n0011> created at line 197.
+    Found 24-bit adder for signal <$n0016> created at line 208.
+    Found 48-bit adder for signal <$n0030>.
+    Found 48-bit adder for signal <$n0031>.
+    Found 24-bit adder for signal <$n0032>.
+    Found 24-bit adder for signal <$n0033>.
+    Found 3-bit up counter for signal <count>.
+    Found 96-bit register for signal <prod2<0>>.
+    Found 96-bit register for signal <prod2<1>>.
+    Found 96-bit register for signal <prod2<2>>.
+    Found 96-bit register for signal <prod2<3>>.
+    Found 48-bit adder for signal <prod_a_b<4>>.
+    Found 24-bit register for signal <s_fracta_i>.
+    Found 24-bit register for signal <s_fractb_i>.
+    Found 1-bit register for signal <s_ready_o>.
+    Found 1-bit xor2 for signal <s_sign_o>.
+    Found 1-bit register for signal <s_signa_i>.
+    Found 1-bit register for signal <s_signb_i>.
+    Found 1-bit register for signal <s_start_i>.
+    Found 1-bit register for signal <s_state<0>>.
+    Found 96-bit register for signal <sum>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred   4 Multiplier(s).
+	inferred   1 Xor(s).
+Unit <mul_24> synthesized.
+
+
+Synthesizing Unit <pre_norm_mul>.
+    Related source file is "D:/Dan/FPGA_FPU/cpld_test/pre_norm_mul.vhd".
+WARNING:Xst:647 - Input <opb_i<31>> is never used.
+WARNING:Xst:647 - Input <opa_i<31>> is never used.
+    Found 10-bit register for signal <exp_10_o>.
+    Found 10-bit adder for signal <$n0002> created at line 101.
+    Found 10-bit subtractor for signal <s_exp_10_o>.
+    Found 10-bit adder for signal <s_expa_in>.
+    Found 10-bit adder for signal <s_expb_in>.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+Unit <pre_norm_mul> synthesized.
+
+
+Synthesizing Unit <post_norm_addsub>.
+    Related source file is "D:/Dan/FPGA_FPU/cpld_test/post_norm_addsub.vhd".
+WARNING:Xst:646 - Signal <s_fracto28_2<27:26>> is assigned but never used.
+    Found 32-bit register for signal <output_o>.
+    Found 1-bit register for signal <ine_o>.
+    Found 6-bit adder for signal <$n0042> created at line 90.
+    Found 6-bit adder for signal <$n0043> created at line 90.
+    Found 6-bit adder for signal <$n0044> created at line 90.
+    Found 6-bit adder for signal <$n0045> created at line 90.
+    Found 6-bit adder for signal <$n0046> created at line 90.
+    Found 6-bit adder for signal <$n0047> created at line 90.
+    Found 6-bit adder for signal <$n0048> created at line 90.
+    Found 6-bit adder for signal <$n0049> created at line 90.
+    Found 6-bit adder for signal <$n0050> created at line 90.
+    Found 6-bit adder for signal <$n0051> created at line 90.
+    Found 6-bit adder for signal <$n0052> created at line 90.
+    Found 6-bit adder for signal <$n0053> created at line 90.
+    Found 6-bit adder for signal <$n0054> created at line 90.
+    Found 6-bit adder for signal <$n0055> created at line 90.
+    Found 6-bit adder for signal <$n0056> created at line 90.
+    Found 6-bit adder for signal <$n0057> created at line 90.
+    Found 6-bit adder for signal <$n0058> created at line 90.
+    Found 6-bit adder for signal <$n0059> created at line 90.
+    Found 6-bit adder for signal <$n0060> created at line 90.
+    Found 6-bit adder for signal <$n0061> created at line 90.
+    Found 6-bit adder for signal <$n0062> created at line 90.
+    Found 6-bit adder for signal <$n0063> created at line 90.
+    Found 6-bit adder for signal <$n0064> created at line 90.
+    Found 6-bit adder for signal <$n0065> created at line 90.
+    Found 6-bit adder for signal <$n0066> created at line 90.
+    Found 28-bit shifter logical right for signal <$n0069> created at line 165.
+    Found 28-bit shifter logical left for signal <$n0070> created at line 167.
+    Found 6-bit adder for signal <$n0071> created at line 90.
+    Found 10-bit adder for signal <$n0072> created at line 132.
+    Found 28-bit adder for signal <$n0073> created at line 182.
+    Found 9-bit subtractor for signal <$n0074> created at line 172.
+    Found 9-bit adder for signal <$n0075> created at line 188.
+    Found 6-bit subtractor for signal <$n0076> created at line 140.
+    Found 1-bit xor3 for signal <$n0127> created at line 198.
+    Found 10-bit subtractor for signal <s_exp10>.
+    Found 9-bit register for signal <s_expo9_1>.
+    Found 28-bit register for signal <s_fracto28_1>.
+    Found 6-bit register for signal <s_shl1>.
+    Found 6-bit register for signal <s_shr1>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred  32 Adder/Subtractor(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <post_norm_addsub> synthesized.
+
+
+Synthesizing Unit <addsub_28>.
+    Related source file is "D:/Dan/FPGA_FPU/cpld_test/addsub_28.vhd".
+    Found 1-bit register for signal <sign_o>.
+    Found 28-bit register for signal <fract_o>.
+    Found 28-bit comparator greater for signal <$n0005> created at line 100.
+    Found 1-bit xor2 for signal <$n0018> created at line 106.
+    Found 1-bit xor2 for signal <$n0019> created at line 103.
+    Found 28-bit addsub for signal <s_fract_o>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   2 Xor(s).
+Unit <addsub_28> synthesized.
+
+
+Synthesizing Unit <pre_norm_addsub>.
+    Related source file is "D:/Dan/FPGA_FPU/cpld_test/pre_norm_addsub.vhd".
+WARNING:Xst:647 - Input <opb_i<31>> is never used.
+WARNING:Xst:647 - Input <opa_i<31>> is never used.
+WARNING:Xst:646 - Signal <s_fracta_1> is assigned but never used.
+WARNING:Xst:646 - Signal <s_fractb_1> is assigned but never used.
+WARNING:Xst:646 - Signal <s_op_dn> is assigned but never used.
+WARNING:Xst:646 - Signal <s_expa_eq_expb> is assigned but never used.
+    Found 28-bit register for signal <fracta_28_o>.
+    Found 8-bit register for signal <exp_o>.
+    Found 28-bit register for signal <fractb_28_o>.
+    Found 1-bit xor2 for signal <$n0001> created at line 139.
+    Found 8-bit subtractor for signal <$n0032> created at line 144.
+    Found 6-bit adder for signal <$n0034> created at line 105.
+    Found 6-bit adder for signal <$n0035> created at line 105.
+    Found 6-bit adder for signal <$n0036> created at line 105.
+    Found 6-bit adder for signal <$n0037> created at line 105.
+    Found 6-bit adder for signal <$n0038> created at line 105.
+    Found 6-bit adder for signal <$n0039> created at line 105.
+    Found 6-bit adder for signal <$n0040> created at line 105.
+    Found 6-bit adder for signal <$n0041> created at line 105.
+    Found 6-bit adder for signal <$n0042> created at line 105.
+    Found 6-bit adder for signal <$n0043> created at line 105.
+    Found 6-bit adder for signal <$n0044> created at line 105.
+    Found 6-bit adder for signal <$n0045> created at line 105.
+    Found 6-bit adder for signal <$n0046> created at line 105.
+    Found 6-bit adder for signal <$n0047> created at line 105.
+    Found 6-bit adder for signal <$n0048> created at line 105.
+    Found 6-bit adder for signal <$n0049> created at line 105.
+    Found 6-bit adder for signal <$n0050> created at line 105.
+    Found 6-bit adder for signal <$n0051> created at line 105.
+    Found 6-bit adder for signal <$n0052> created at line 105.
+    Found 6-bit adder for signal <$n0053> created at line 105.
+    Found 6-bit adder for signal <$n0054> created at line 105.
+    Found 6-bit adder for signal <$n0055> created at line 105.
+    Found 6-bit adder for signal <$n0056> created at line 105.
+    Found 6-bit adder for signal <$n0057> created at line 105.
+    Found 6-bit adder for signal <$n0058> created at line 105.
+    Found 6-bit adder for signal <$n0059> created at line 105.
+    Found 28-bit shifter logical right for signal <$n0065> created at line 158.
+    Found 6-bit adder for signal <$n0066> created at line 105.
+    Found 8-bit adder for signal <$n0067>.
+    Found 8-bit comparator greater for signal <$n0072> created at line 110.
+    Found 8-bit comparator greater for signal <$n0089> created at line 162.
+    Found 8-bit register for signal <s_exp_diff>.
+    Found 8-bit register for signal <s_exp_o>.
+    Summary:
+	inferred  29 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred   1 Combinational logic shifter(s).
+	inferred   1 Xor(s).
+Unit <pre_norm_addsub> synthesized.
+
+
+Synthesizing Unit <fpu>.
+    Related source file is "D:/Dan/FPGA_FPU/cpld_test/fpu.vhd".
+WARNING:Xst:1305 - Output <ready_o> is never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <serial_div_sign> is never used or assigned.
+WARNING:Xst:653 - Signal <s_qnan_o> is used but never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <s_infa> is assigned but never used.
+WARNING:Xst:646 - Signal <s_infb> is assigned but never used.
+WARNING:Xst:653 - Signal <post_norm_div_ine> is used but never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <pre_norm_div_exp> is never used or assigned.
+WARNING:Xst:1780 - Signal <pre_norm_div_dvdnd> is never used or assigned.
+WARNING:Xst:1780 - Signal <pre_norm_sqrt_fracta_o> is never used or assigned.
+WARNING:Xst:653 - Signal <s_div_zero_o> is used but never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <pre_norm_div_dvsor> is never used or assigned.
+WARNING:Xst:653 - Signal <post_norm_div_output> is used but never assigned. Tied to value 00000000000000000000000000000000.
+WARNING:Xst:646 - Signal <s_start_i> is assigned but never used.
+WARNING:Xst:1780 - Signal <s_count> is never used or assigned.
+WARNING:Xst:1780 - Signal <serial_mul_fract_48> is never used or assigned.
+WARNING:Xst:653 - Signal <s_snan_o> is used but never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <pre_norm_sqrt_exp_o> is never used or assigned.
+WARNING:Xst:1780 - Signal <sqrt_ine_o> is never used or assigned.
+WARNING:Xst:1780 - Signal <sqrt_sqr_o> is never used or assigned.
+WARNING:Xst:653 - Signal <s_inf_o> is used but never assigned. Tied to value 0.
+WARNING:Xst:653 - Signal <post_norm_sqrt_ine_o> is used but never assigned. Tied to value 0.
+WARNING:Xst:653 - Signal <post_norm_sqrt_output> is used but never assigned. Tied to value 00000000000000000000000000000000.
+WARNING:Xst:653 - Signal <s_overflow_o> is used but never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <serial_mul_sign> is never used or assigned.
+WARNING:Xst:1780 - Signal <serial_div_div_zero> is never used or assigned.
+WARNING:Xst:653 - Signal <s_zero_o> is used but never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <serial_div_qutnt> is never used or assigned.
+WARNING:Xst:1780 - Signal <serial_div_rmndr> is never used or assigned.
+WARNING:Xst:1780 - Signal <s_state> is never used or assigned.
+WARNING:Xst:653 - Signal <s_underflow_o> is used but never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <s_fpu_op_i<2:1>> is assigned but never used.
+WARNING:Xst:1780 - Signal <reset_c> is never used or assigned.
+    Found 32-bit register for signal <output_o>.
+    Found 1-bit register for signal <div_zero_o>.
+    Found 1-bit register for signal <qnan_o>.
+    Found 1-bit register for signal <underflow_o>.
+    Found 1-bit register for signal <snan_o>.
+    Found 1-bit register for signal <overflow_o>.
+    Found 1-bit register for signal <ine_o>.
+    Found 1-bit register for signal <inf_o>.
+    Found 1-bit register for signal <zero_o>.
+    Found 3-bit register for signal <s_fpu_op_i>.
+    Found 1-bit register for signal <s_ine_o>.
+    Found 32-bit register for signal <s_opa_i>.
+    Found 32-bit register for signal <s_opb_i>.
+    Found 32-bit register for signal <s_output1>.
+    Found 2-bit register for signal <s_rmode_i>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+Unit <fpu> synthesized.
+
+
+Synthesizing Unit <main>.
+    Related source file is "main.vf".
+Unit <main> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 4
+ 6x6-bit multiplier                                    : 4
+# Adders/Subtractors                                   : 173
+ 10-bit adder                                          : 7
+ 10-bit subtractor                                     : 4
+ 24-bit adder                                          : 3
+ 25-bit adder                                          : 1
+ 28-bit adder                                          : 1
+ 28-bit addsub                                         : 1
+ 48-bit adder                                          : 3
+ 6-bit adder                                           : 146
+ 6-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 2
+# Counters                                             : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 73
+ 1-bit register                                        : 18
+ 10-bit register                                       : 2
+ 2-bit register                                        : 2
+ 24-bit register                                       : 22
+ 25-bit register                                       : 1
+ 28-bit register                                       : 4
+ 3-bit register                                        : 1
+ 32-bit register                                       : 8
+ 48-bit register                                       : 2
+ 6-bit register                                        : 6
+ 8-bit register                                        : 5
+ 9-bit register                                        : 2
+# Comparators                                          : 4
+ 28-bit comparator greater                             : 1
+ 6-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 8
+ 1-bit 4-to-1 multiplexer                              : 8
+# Logic shifters                                       : 5
+ 28-bit shifter logical left                           : 1
+ 28-bit shifter logical right                          : 2
+ 48-bit shifter logical left                           : 1
+ 48-bit shifter logical right                          : 1
+# Xors                                                 : 5
+ 1-bit xor2                                            : 4
+ 1-bit xor3                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch  <qnan_o> (without init value) has a constant value of 0 in block <fpu>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <zero_o> (without init value) has a constant value of 0 in block <fpu>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <overflow_o> (without init value) has a constant value of 0 in block <fpu>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <inf_o> (without init value) has a constant value of 0 in block <fpu>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <div_zero_o> (without init value) has a constant value of 0 in block <fpu>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <snan_o> (without init value) has a constant value of 0 in block <fpu>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <underflow_o> (without init value) has a constant value of 0 in block <fpu>.
+WARNING:Xst:1291 - FF/Latch <s_ready_o> is unconnected in block <i_mul_24>.
+WARNING:Xst:1291 - FF/Latch <31> is unconnected in block <s_opa_i>.
+WARNING:Xst:1291 - FF/Latch <31> is unconnected in block <s_opb_i>.
+WARNING:Xst:1291 - FF/Latch <2> is unconnected in block <s_fpu_op_i>.
+WARNING:Xst:1291 - FF/Latch <1> is unconnected in block <s_fpu_op_i>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 4
+ 6x6-bit multiplier                                    : 4
+# Adders/Subtractors                                   : 173
+ 10-bit adder                                          : 7
+ 10-bit subtractor                                     : 4
+ 24-bit adder                                          : 3
+ 25-bit adder                                          : 1
+ 28-bit adder                                          : 1
+ 28-bit addsub                                         : 1
+ 48-bit adder                                          : 3
+ 6-bit adder                                           : 146
+ 6-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 2
+ 9-bit subtractor                                      : 2
+# Counters                                             : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 226
+ Flip-Flops                                            : 226
+# Multiplexers                                         : 8
+ 1-bit 4-to-1 multiplexer                              : 8
+# Xors                                                 : 1
+ 1-bit xor3                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch  <s_shr1_5> (without init value) has a constant value of 0 in block <post_norm_addsub>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <s_shr1_4> (without init value) has a constant value of 0 in block <post_norm_addsub>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <s_shr1_3> (without init value) has a constant value of 0 in block <post_norm_addsub>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <s_shr1_2> (without init value) has a constant value of 0 in block <post_norm_addsub>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <s_shr1_1> (without init value) has a constant value of 0 in block <post_norm_addsub>.
+WARNING:Xst:1710 - FF/Latch  <fracta_28_o_27> (without init value) has a constant value of 0 in block <pre_norm_addsub>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <fractb_28_o_27> (without init value) has a constant value of 0 in block <pre_norm_addsub>.
+WARNING:Xst:1291 - FF/Latch <s_fpu_op_i_2> is unconnected in block <fpu>.
+WARNING:Xst:1291 - FF/Latch <s_fpu_op_i_1> is unconnected in block <fpu>.
+WARNING:Xst:1291 - FF/Latch <s_opb_i_31> is unconnected in block <post_norm_mul>.
+WARNING:Xst:1291 - FF/Latch <s_opa_i_31> is unconnected in block <post_norm_mul>.
+WARNING:Xst:1710 - FF/Latch  <prod2<0>_1_23> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_1_22> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_1_21> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_1_20> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_1_19> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_1_18> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_1_5> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_1_4> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_1_3> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_1_2> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_1_1> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_1_0> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_0_11> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_0_10> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_0_9> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_0_8> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_0_7> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_0_6> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_0_5> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_0_4> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_0_3> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_0_2> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_0_1> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_0_0> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_3_23> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_3_22> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_3_21> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_3_20> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_3_19> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_3_18> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_3_17> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_3_16> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_3_15> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_3_14> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_3_13> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_3_12> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_2_23> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_2_22> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_2_21> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_2_20> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_2_19> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_2_18> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_2_5> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_2_4> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_2_3> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_2_2> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_2_1> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<0>_2_0> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_1_23> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_1_22> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_1_21> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_1_20> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_1_19> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_1_18> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_1_5> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_1_4> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_1_3> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_1_2> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_1_1> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_1_0> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_0_11> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_0_10> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_0_9> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_0_8> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_0_7> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_0_6> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_0_5> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_0_4> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_0_3> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_0_2> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_0_1> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_0_0> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_3_23> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_3_22> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_3_21> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_3_20> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_3_19> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_3_18> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_3_17> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_3_16> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_3_15> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_3_14> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_3_13> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_3_12> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_2_23> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_2_22> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_2_21> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_2_20> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_2_19> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_2_18> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_2_5> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_2_4> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_2_3> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_2_2> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_2_1> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<3>_2_0> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_1_23> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_1_22> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_1_21> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_1_20> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_1_19> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_1_18> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_1_5> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_1_4> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_1_3> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_1_2> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_1_1> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_1_0> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_0_11> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_0_10> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_0_9> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_0_8> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_0_7> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_0_6> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_0_5> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_0_4> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_0_3> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_0_2> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_0_1> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_0_0> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_3_23> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_3_22> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_3_21> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_3_20> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_3_19> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_3_18> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_3_17> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_3_16> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_3_15> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_3_14> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_3_13> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_3_12> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_2_23> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_2_22> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_2_21> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_2_20> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_2_19> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_2_18> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_2_5> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_2_4> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_2_3> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_2_2> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_2_1> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<2>_2_0> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_1_23> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_1_22> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_1_21> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_1_20> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_1_19> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_1_18> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_1_5> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_1_4> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_1_3> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_1_2> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_1_1> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_1_0> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_0_11> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_0_10> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_0_9> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_0_8> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_0_7> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_0_6> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_0_5> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_0_4> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_0_3> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_0_2> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_0_1> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_0_0> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_3_23> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_3_22> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_3_21> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_3_20> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_3_19> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_3_18> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_3_17> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_3_16> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_3_15> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_3_14> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_3_13> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_3_12> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_2_23> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_2_22> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_2_21> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_2_20> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_2_19> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_2_18> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_2_5> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_2_4> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_2_3> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_2_2> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_2_1> (without init value) has a constant value of 0 in block <mul_24>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <prod2<1>_2_0> (without init value) has a constant value of 0 in block <mul_24>.
+INFO:Xst:2261 - The FF/Latch <s_expa_6> in Unit <post_norm_mul> is equivalent to the following FF/Latch, which will be removed : <s_opa_i_29> 
+INFO:Xst:2261 - The FF/Latch <s_expa_5> in Unit <post_norm_mul> is equivalent to the following FF/Latch, which will be removed : <s_opa_i_28> 
+INFO:Xst:2261 - The FF/Latch <s_expa_1> in Unit <post_norm_mul> is equivalent to the following FF/Latch, which will be removed : <s_opa_i_24> 
+INFO:Xst:2261 - The FF/Latch <s_expb_7> in Unit <post_norm_mul> is equivalent to the following FF/Latch, which will be removed : <s_opb_i_30> 
+INFO:Xst:2261 - The FF/Latch <s_expa_4> in Unit <post_norm_mul> is equivalent to the following FF/Latch, which will be removed : <s_opa_i_27> 
+INFO:Xst:2261 - The FF/Latch <s_expa_0> in Unit <post_norm_mul> is equivalent to the following FF/Latch, which will be removed : <s_opa_i_23> 
+INFO:Xst:2261 - The FF/Latch <s_expb_6> in Unit <post_norm_mul> is equivalent to the following FF/Latch, which will be removed : <s_opb_i_29> 
+INFO:Xst:2261 - The FF/Latch <s_expb_2> in Unit <post_norm_mul> is equivalent to the following FF/Latch, which will be removed : <s_opb_i_25> 
+INFO:Xst:2261 - The FF/Latch <s_expb_5> in Unit <post_norm_mul> is equivalent to the following FF/Latch, which will be removed : <s_opb_i_28> 
+INFO:Xst:2261 - The FF/Latch <s_expb_1> in Unit <post_norm_mul> is equivalent to the following FF/Latch, which will be removed : <s_opb_i_24> 
+INFO:Xst:2261 - The FF/Latch <s_expb_0> in Unit <post_norm_mul> is equivalent to the following FF/Latch, which will be removed : <s_opb_i_23> 
+INFO:Xst:2261 - The FF/Latch <s_expa_7> in Unit <post_norm_mul> is equivalent to the following FF/Latch, which will be removed : <s_opa_i_30> 
+INFO:Xst:2261 - The FF/Latch <s_expa_3> in Unit <post_norm_mul> is equivalent to the following FF/Latch, which will be removed : <s_opa_i_26> 
+INFO:Xst:2261 - The FF/Latch <s_expa_2> in Unit <post_norm_mul> is equivalent to the following FF/Latch, which will be removed : <s_opa_i_25> 
+INFO:Xst:2261 - The FF/Latch <s_expb_4> in Unit <post_norm_mul> is equivalent to the following FF/Latch, which will be removed : <s_opb_i_27> 
+INFO:Xst:2261 - The FF/Latch <s_expb_3> in Unit <post_norm_mul> is equivalent to the following FF/Latch, which will be removed : <s_opb_i_26> 
+WARNING:Xst:1989 - Unit <post_norm_addsub>: instances <Madd__n0043_Mxor_Result<2>>, <Madd__n0043_Mxor_Result<3>> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <post_norm_addsub>: instances <Madd__n0043_Mxor_Result<2>>, <Madd__n0043_Mxor_Result<4>> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <post_norm_addsub>: instances <Madd__n0043_Mxor_Result<2>>, <Madd__n0043_Mxor_Result<5>> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <post_norm_addsub>: instances <Madd__n0043_Mxor_Result<2>>, <Madd__n0072_Mxor_Result<9>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <post_norm_addsub>: instances <Madd__n0043_Mxor_Result<2>>, <Madd__n0072_Mxor_Result<8>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <pre_norm_addsub>: instances <Madd__n0056_Mxor_Result<2>>, <Madd__n0056_Mxor_Result<3>> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <pre_norm_addsub>: instances <Madd__n0056_Mxor_Result<2>>, <Madd__n0056_Mxor_Result<4>> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <pre_norm_addsub>: instances <Madd__n0056_Mxor_Result<2>>, <Madd__n0056_Mxor_Result<5>> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <post_norm_mul>: instances <Madd__n0162_Mxor_Result<2>>, <Madd__n0162_Mxor_Result<3>> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <post_norm_mul>: instances <Madd__n0162_Mxor_Result<2>>, <Madd__n0162_Mxor_Result<4>> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <post_norm_mul>: instances <Madd__n0162_Mxor_Result<2>>, <Madd__n0162_Mxor_Result<5>> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <post_norm_mul>: instances <Madd__n0162_Mxor_Result<2>>, <Madd__n0140_Mxor_Result<2>> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <post_norm_mul>: instances <Madd__n0162_Mxor_Result<2>>, <Madd__n0140_Mxor_Result<3>> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <post_norm_mul>: instances <Madd__n0162_Mxor_Result<2>>, <Madd__n0140_Mxor_Result<4>> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <post_norm_mul>: instances <Madd__n0162_Mxor_Result<2>>, <Madd__n0140_Mxor_Result<5>> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0033_Mxor_Result<5>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0033_Mxor_Result<4>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0033_Mxor_Result<3>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0033_Mxor_Result<2>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0033_Mxor_Result<1>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0032_Mxor_Result<23>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0032_Mxor_Result<22>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0032_Mxor_Result<21>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0032_Mxor_Result<20>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0032_Mxor_Result<19>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0032_Mxor_Result<18>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0031_Mxor_Result<0>> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0031_Mxor_Result<11>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0031_Mxor_Result<10>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0031_Mxor_Result<9>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0031_Mxor_Result<8>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0031_Mxor_Result<7>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0031_Mxor_Result<6>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0031_Mxor_Result<5>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0031_Mxor_Result<4>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0031_Mxor_Result<3>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0031_Mxor_Result<2>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0031_Mxor_Result<1>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0030_Mxor_Result<47>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0030_Mxor_Result<46>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0030_Mxor_Result<45>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0030_Mxor_Result<44>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0030_Mxor_Result<43>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0030_Mxor_Result<42>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0030_Mxor_Result<41>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0030_Mxor_Result<40>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0030_Mxor_Result<39>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0030_Mxor_Result<38>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0030_Mxor_Result<37>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <mul_24>: instances <Madd__n0033_Mxor_Result<0>>, <Madd__n0030_Mxor_Result<36>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <pre_norm_mul>: instances <Madd_s_expb_in_Mxor_Result<9>_Mxor__n0000>, <Madd_s_expb_in_Mxor_Result<8>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <pre_norm_mul>: instances <Madd_s_expb_in_Mxor_Result<9>_Mxor__n0000>, <Madd_s_expa_in_Mxor_Result<9>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <pre_norm_mul>: instances <Madd_s_expb_in_Mxor_Result<9>_Mxor__n0000>, <Madd_s_expa_in_Mxor_Result<8>_Mxor__n0000> of unit <LPM_XOR2_1> are equivalent, second instance is removed
+
+Optimizing unit <main> ...
+
+Optimizing unit <post_norm_addsub> ...
+WARNING:Xst:1710 - FF/Latch  <s_expo9_1_8> (without init value) has a constant value of 0 in block <post_norm_addsub>.
+
+Optimizing unit <addsub_28> ...
+
+Optimizing unit <pre_norm_addsub> ...
+
+Optimizing unit <fpu> ...
+
+Optimizing unit <post_norm_mul> ...
+WARNING:Xst:1710 - FF/Latch  <s_expo1_8> (without init value) has a constant value of 0 in block <post_norm_mul>.
+
+Optimizing unit <mul_24> ...
+  implementation constraint: INIT=r	 : s_state_0
+  implementation constraint: INIT=r	 : count_0
+  implementation constraint: INIT=r	 : count_1
+  implementation constraint: INIT=r	 : count_2
+
+Optimizing unit <pre_norm_mul> ...
+WARNING:Xst:1291 - FF/Latch <s_ready_o> is unconnected in block <i_mul_24>.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : main.ngr
+Top Level Output File Name         : main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : YES
+Target Technology                  : CoolRunner2 CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 112
+
+Cell Usage :
+# BELS                             : 29506
+#      AND2                        : 13318
+#      AND3                        : 240
+#      AND4                        : 33
+#      AND5                        : 8
+#      AND6                        : 8
+#      AND7                        : 2
+#      AND8                        : 36
+#      GND                         : 7
+#      INV                         : 7765
+#      OR2                         : 6379
+#      OR3                         : 13
+#      OR4                         : 6
+#      OR7                         : 5
+#      OR8                         : 19
+#      VCC                         : 3
+#      XOR2                        : 1664
+# FlipFlops/Latches                : 930
+#      FD                          : 638
+#      FDCE                        : 292
+# IO Buffers                       : 112
+#      IBUF                        : 71
+#      OBUF                        : 41
+=========================================================================
+CPU : 88.88 / 89.61 s | Elapsed : 88.00 / 89.00 s
+ 
+--> 
+
+Total memory usage is 196228 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  316 (   0 filtered)
+Number of infos    :   19 (   0 filtered)
+

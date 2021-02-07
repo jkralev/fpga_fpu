@@ -1,0 +1,2197 @@
+Release 13.1 - xst O.40d (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: Top_Module.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top_Module.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top_Module"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : Top_Module
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : Yes
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : NO
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : NO
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/ivedsp_pkg.vhd" in Library work.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/fp_sum_pkg.vhd" in Library work.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/fp_mul_pkg.vhd" in Library work.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/Rise_detect.vhd" in Library work.
+Architecture rtl of Entity rise_detect is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/Rise_detect1.vhd" in Library work.
+Architecture rtl of Entity rise_detect1 is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/In_Port_Control.vhd" in Library work.
+Architecture rtl of Entity in_port_control is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/Register_rsvd.vhd" in Library work.
+Architecture rtl of Entity register_rsvd is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/Register1.vhd" in Library work.
+Architecture rtl of Entity register1 is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/test_rx_pkg.vhd" in Library work.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/test_lan_pkg.vhd" in Library work.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/int2single_pkg.vhd" in Library work.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/Generator1_pkg.vhd" in Library work.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/Variable_bitshift.vhd" in Library work.
+Architecture rtl of Entity variable_bitshift is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/Normalize.vhd" in Library work.
+Architecture rtl of Entity normalize is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/Normalize_mul.vhd" in Library work.
+Architecture rtl of Entity normalize_mul is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/Instruction_Decoder.vhd" in Library work.
+Architecture rtl of Entity instruction_decoder is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/IN_OUT_Controller.vhd" in Library work.
+Architecture rtl of Entity in_out_controller is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/alpha12_bit_Program_Counter.vhd" in Library work.
+Architecture rtl of Entity alpha12_bit_program_counter is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/alpha32_bit_Acumulator_resource.vhd" in Library work.
+Architecture rtl of Entity alpha32_bit_acumulator_resource is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/alpha4bit2uint8.vhd" in Library work.
+Architecture rtl of Entity alpha4bit2uint8 is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/Receive.vhd" in Library work.
+Architecture rtl of Entity receive is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/int2bit.vhd" in Library work.
+Architecture rtl of Entity int2bit is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/Transmit.vhd" in Library work.
+Architecture rtl of Entity transmit is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/Single_to_Uint.vhd" in Library work.
+Architecture rtl of Entity single_to_uint is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/rom1_pkg.vhd" in Library work.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/Int_to_Single1.vhd" in Library work.
+Architecture rtl of Entity int_to_single1 is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/Gen_Imp.vhd" in Library work.
+Architecture rtl of Entity gen_imp is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/fp_mul.vhd" in Library work.
+Architecture rtl of Entity fp_mul is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/fp_sum.vhd" in Library work.
+Architecture rtl of Entity fp_sum is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/contr1_pkg.vhd" in Library work.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/ivedsp.vhd" in Library work.
+Architecture rtl of Entity ivedsp is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/gen_tick.vhd" in Library work.
+Architecture behavioral of Entity gen_tick is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/counter_test.vhd" in Library work.
+Architecture behavioral of Entity counter_test is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/shift_reg_test.vhd" in Library work.
+Architecture behavioral of Entity shift_reg_test is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/shift_reg_out.vhd" in Library work.
+Architecture behavioral of Entity shift_reg_out is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/spi_rom.vhd" in Library work.
+Architecture syn of Entity spi_rom is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/ab_contr.vhd" in Library work.
+Architecture behavioral of Entity ab_contr is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/contr1_conv.vhd" in Library work.
+Architecture rtl of Entity contr1_conv is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/fp_wrapper.vhd" in Library work.
+Architecture behavioral of Entity fp_wrapper is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/Generator1.vhd" in Library work.
+Architecture rtl of Entity generator1 is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/int2single.vhd" in Library work.
+Architecture rtl of Entity int2single is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/prog_mem.vhd" in Library work.
+Architecture syn of Entity prog_mem is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/ram1.vhd" in Library work.
+Architecture syn of Entity ram1 is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/ram1dual.vhd" in Library work.
+Architecture syn1 of Entity ram1dual is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/real_control.vhd" in Library work.
+Architecture syn of Entity real_control is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/rom1.vhd" in Library work.
+Architecture rtl of Entity rom1 is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/single_int.vhd" in Library work.
+Architecture behavioral of Entity single_int is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/test_lan.vhd" in Library work.
+Architecture rtl of Entity test_lan is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/test_rx.vhd" in Library work.
+Architecture rtl of Entity test_rx is up to date.
+Compiling vhdl file "D:/Dan/FPGA_FPU/ise_project_fpu/Timer10ms.vhd" in Library work.
+Architecture rtl of Entity timer10ms is up to date.
+Compiling verilog file "Top_Module.vf" in library work
+Module <Top_Module> compiled
+No errors in compilation
+Analysis of file <"Top_Module.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <Top_Module> in library <work>.
+
+Analyzing hierarchy for entity <test_lan> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <generator1> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <ram1dual> in library <work> (architecture <syn1>).
+
+Analyzing hierarchy for entity <rom1> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <ram1> in library <work> (architecture <syn>).
+
+Analyzing hierarchy for entity <test_rx> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <timer10ms> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <real_control> in library <work> (architecture <syn>).
+
+Analyzing hierarchy for entity <prog_mem> in library <work> (architecture <syn>).
+
+Analyzing hierarchy for entity <contr1_conv> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <fp_wrapper> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <int2single> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <ab_contr> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <single_int> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Transmit> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <Gen_Imp> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <alpha4bit2uint8> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <Receive> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <int2bit> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <ivedsp> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <fp_mul> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <fp_sum> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <Int_to_Single1> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <gen_tick> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <counter_test> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <shift_reg_test> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <shift_reg_out> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <spi_rom> in library <work> (architecture <syn>).
+
+Analyzing hierarchy for entity <Single_to_Uint> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <Instruction_Decoder> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <IN_OUT_Controller> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <alpha12_bit_Program_Counter> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <alpha32_bit_Acumulator_resource> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <Normalize_mul> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <Variable_bitshift> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <Normalize> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <Rise_detect> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <Rise_detect1> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <In_Port_Control> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <Register_rsvd> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <Register1> in library <work> (architecture <rtl>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <Top_Module>.
+Module <Top_Module> is correct for synthesis.
+ 
+Analyzing Entity <test_lan> in library <work> (Architecture <rtl>).
+Entity <test_lan> analyzed. Unit <test_lan> generated.
+
+Analyzing Entity <Transmit> in library <work> (Architecture <rtl>).
+Entity <Transmit> analyzed. Unit <Transmit> generated.
+
+Analyzing Entity <generator1> in library <work> (Architecture <rtl>).
+Entity <generator1> analyzed. Unit <generator1> generated.
+
+Analyzing Entity <Gen_Imp> in library <work> (Architecture <rtl>).
+Entity <Gen_Imp> analyzed. Unit <Gen_Imp> generated.
+
+Analyzing Entity <ram1dual> in library <work> (Architecture <syn1>).
+Entity <ram1dual> analyzed. Unit <ram1dual> generated.
+
+Analyzing Entity <rom1> in library <work> (Architecture <rtl>).
+Entity <rom1> analyzed. Unit <rom1> generated.
+
+Analyzing Entity <ram1> in library <work> (Architecture <syn>).
+Entity <ram1> analyzed. Unit <ram1> generated.
+
+Analyzing Entity <test_rx> in library <work> (Architecture <rtl>).
+Entity <test_rx> analyzed. Unit <test_rx> generated.
+
+Analyzing Entity <alpha4bit2uint8> in library <work> (Architecture <rtl>).
+Entity <alpha4bit2uint8> analyzed. Unit <alpha4bit2uint8> generated.
+
+Analyzing Entity <Receive> in library <work> (Architecture <rtl>).
+Entity <Receive> analyzed. Unit <Receive> generated.
+
+Analyzing Entity <int2bit> in library <work> (Architecture <rtl>).
+Entity <int2bit> analyzed. Unit <int2bit> generated.
+
+Analyzing Entity <timer10ms> in library <work> (Architecture <rtl>).
+Entity <timer10ms> analyzed. Unit <timer10ms> generated.
+
+Analyzing Entity <real_control> in library <work> (Architecture <syn>).
+WARNING:Xst:790 - "D:/Dan/FPGA_FPU/ise_project_fpu/real_control.vhd" line 38: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "D:/Dan/FPGA_FPU/ise_project_fpu/real_control.vhd" line 40: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Entity <real_control> analyzed. Unit <real_control> generated.
+
+Analyzing Entity <prog_mem> in library <work> (Architecture <syn>).
+WARNING:Xst:790 - "D:/Dan/FPGA_FPU/ise_project_fpu/prog_mem.vhd" line 37: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Entity <prog_mem> analyzed. Unit <prog_mem> generated.
+
+Analyzing Entity <contr1_conv> in library <work> (Architecture <rtl>).
+Entity <contr1_conv> analyzed. Unit <contr1_conv> generated.
+
+Analyzing Entity <ivedsp> in library <work> (Architecture <rtl>).
+Entity <ivedsp> analyzed. Unit <ivedsp> generated.
+
+Analyzing Entity <Instruction_Decoder> in library <work> (Architecture <rtl>).
+Entity <Instruction_Decoder> analyzed. Unit <Instruction_Decoder> generated.
+
+Analyzing Entity <IN_OUT_Controller> in library <work> (Architecture <rtl>).
+Entity <IN_OUT_Controller> analyzed. Unit <IN_OUT_Controller> generated.
+
+Analyzing Entity <Rise_detect> in library <work> (Architecture <rtl>).
+Entity <Rise_detect> analyzed. Unit <Rise_detect> generated.
+
+Analyzing Entity <Rise_detect1> in library <work> (Architecture <rtl>).
+Entity <Rise_detect1> analyzed. Unit <Rise_detect1> generated.
+
+Analyzing Entity <In_Port_Control> in library <work> (Architecture <rtl>).
+Entity <In_Port_Control> analyzed. Unit <In_Port_Control> generated.
+
+Analyzing Entity <Register_rsvd> in library <work> (Architecture <rtl>).
+Entity <Register_rsvd> analyzed. Unit <Register_rsvd> generated.
+
+Analyzing Entity <Register1> in library <work> (Architecture <rtl>).
+Entity <Register1> analyzed. Unit <Register1> generated.
+
+Analyzing Entity <alpha12_bit_Program_Counter> in library <work> (Architecture <rtl>).
+Entity <alpha12_bit_Program_Counter> analyzed. Unit <alpha12_bit_Program_Counter> generated.
+
+Analyzing Entity <alpha32_bit_Acumulator_resource> in library <work> (Architecture <rtl>).
+Entity <alpha32_bit_Acumulator_resource> analyzed. Unit <alpha32_bit_Acumulator_resource> generated.
+
+Analyzing Entity <fp_wrapper> in library <work> (Architecture <behavioral>).
+Entity <fp_wrapper> analyzed. Unit <fp_wrapper> generated.
+
+Analyzing Entity <fp_mul> in library <work> (Architecture <rtl>).
+Entity <fp_mul> analyzed. Unit <fp_mul> generated.
+
+Analyzing Entity <Normalize_mul> in library <work> (Architecture <rtl>).
+Entity <Normalize_mul> analyzed. Unit <Normalize_mul> generated.
+
+Analyzing Entity <fp_sum> in library <work> (Architecture <rtl>).
+Entity <fp_sum> analyzed. Unit <fp_sum> generated.
+
+Analyzing Entity <Variable_bitshift> in library <work> (Architecture <rtl>).
+Entity <Variable_bitshift> analyzed. Unit <Variable_bitshift> generated.
+
+Analyzing Entity <Normalize> in library <work> (Architecture <rtl>).
+Entity <Normalize> analyzed. Unit <Normalize> generated.
+
+Analyzing Entity <int2single> in library <work> (Architecture <rtl>).
+Entity <int2single> analyzed. Unit <int2single> generated.
+
+Analyzing Entity <Int_to_Single1> in library <work> (Architecture <rtl>).
+Entity <Int_to_Single1> analyzed. Unit <Int_to_Single1> generated.
+
+Analyzing Entity <ab_contr> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "D:/Dan/FPGA_FPU/ise_project_fpu/ab_contr.vhd" line 154: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <start>
+Entity <ab_contr> analyzed. Unit <ab_contr> generated.
+
+Analyzing Entity <gen_tick> in library <work> (Architecture <behavioral>).
+Entity <gen_tick> analyzed. Unit <gen_tick> generated.
+
+Analyzing Entity <counter_test> in library <work> (Architecture <behavioral>).
+Entity <counter_test> analyzed. Unit <counter_test> generated.
+
+Analyzing Entity <shift_reg_test> in library <work> (Architecture <behavioral>).
+Entity <shift_reg_test> analyzed. Unit <shift_reg_test> generated.
+
+Analyzing Entity <shift_reg_out> in library <work> (Architecture <behavioral>).
+Entity <shift_reg_out> analyzed. Unit <shift_reg_out> generated.
+
+Analyzing Entity <spi_rom> in library <work> (Architecture <syn>).
+WARNING:Xst:790 - "D:/Dan/FPGA_FPU/ise_project_fpu/spi_rom.vhd" line 27: Index value(s) does not match array range, simulation mismatch.
+Entity <spi_rom> analyzed. Unit <spi_rom> generated.
+
+Analyzing Entity <single_int> in library <work> (Architecture <behavioral>).
+Entity <single_int> analyzed. Unit <single_int> generated.
+
+Analyzing Entity <Single_to_Uint> in library <work> (Architecture <rtl>).
+Entity <Single_to_Uint> analyzed. Unit <Single_to_Uint> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ram1dual>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/ram1dual.vhd".
+WARNING:Xst:647 - Input <en> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16384x8-bit dual-port RAM <Mram_RAM> for signal <RAM>.
+    Found 8-bit register for signal <do>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <ram1dual> synthesized.
+
+
+Synthesizing Unit <rom1>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/rom1.vhd".
+WARNING:Xst:646 - Signal <UDP_length_out1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <UDP_length1_out1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Switch5_out1<15:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Switch4_out1<15:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Switch3_out1<10:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Shift_Arithmetic_out1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Shift_Arithmetic1_out1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Select_mem_unsigned> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Add6_sub_temp> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Add6_out1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Add5_sub_temp> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Add5_out1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Add2_sub_temp<31:16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Add1_sub_temp<31:16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 32x8-bit ROM for signal <IP_header_selector_out1$mux0000>.
+    Found 32x8-bit ROM for signal <Ethernet_selector_out1$mux0000>.
+    Found 32-bit subtractor for signal <Add1_sub_temp>.
+    Found 32-bit subtractor for signal <Add2_sub_temp>.
+    Found 8-bit adder for signal <Add3_add_temp>.
+    Found 8-bit adder for signal <Add3_add_temp_1>.
+    Found 8-bit adder for signal <Add3_out1>.
+    Found 14-bit subtractor for signal <Add4_out1>.
+    Found 11-bit comparator less for signal <Compare_To_Constant1_out1$cmp_lt0000> created at line 147.
+    Found 11-bit comparator less for signal <Compare_To_Constant2_out1$cmp_lt0000> created at line 159.
+    Found 11-bit comparator less for signal <Compare_To_Constant3_out1$cmp_lt0000> created at line 173.
+    Found 11-bit comparator greatequal for signal <Compare_To_Constant4_out1$cmp_ge0000> created at line 185.
+    Summary:
+	inferred   2 ROM(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+Unit <rom1> synthesized.
+
+
+Synthesizing Unit <ram1>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/ram1.vhd".
+WARNING:Xst:647 - Input <en> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2048x8-bit dual-port RAM <Mram_RAM> for signal <RAM>.
+    Found 8-bit register for signal <do>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <ram1> synthesized.
+
+
+Synthesizing Unit <timer10ms>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/Timer10ms.vhd".
+    Found 32-bit up counter for signal <Counter_Limited1_count>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <timer10ms> synthesized.
+
+
+Synthesizing Unit <real_control>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/real_control.vhd".
+WARNING:Xst:647 - Input <addr<11>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2048x32-bit single-port RAM <Mram_RAM> for signal <RAM>.
+    Found 32-bit register for signal <do>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+Unit <real_control> synthesized.
+
+
+Synthesizing Unit <prog_mem>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/prog_mem.vhd".
+WARNING:Xst:647 - Input <addr<11:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1781 - Signal <RAM> is used but never assigned. Tied to default value.
+    Found 1024x16-bit ROM for signal <$varindex0000> created at line 37.
+    Found 16-bit register for signal <do>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  16 D-type flip-flop(s).
+Unit <prog_mem> synthesized.
+
+
+Synthesizing Unit <Transmit>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/Transmit.vhd".
+WARNING:Xst:646 - Signal <crc_temp_9> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_8> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_7> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_69> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_68> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_67> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_66> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_65> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_64> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_63> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_62> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_61> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_60> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_6> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_59> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_58> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_57> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_56> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_55> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_54> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_53> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_52> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_51> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_50> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_5> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_49> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_48> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_47> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_46> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_45> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_44> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_43> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_42> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_41> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_40> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_4> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_39> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_38> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_37> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_36> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_35> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_34> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_33> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_32> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_31> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_30> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_29> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_28> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_27> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_26> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_25> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_24> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_23> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_22> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_21> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_20> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_19> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_18> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_17> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_16> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_15> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_14> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_13> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_12> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_11> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_10> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <crc_temp_0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_9> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_8> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_7> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_6> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_5> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_43> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_42> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_41> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_40> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_4> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_39> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_38> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_37> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_36> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_35> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_34> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_33> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_32> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_31> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_30> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_29> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_28> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_27> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_26> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_25> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_24> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_23> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_22> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_21> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_20> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_19> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_18> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_17> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_16> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_15> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_14> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_13> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_12> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_11> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_10> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_9> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_8> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_7> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_6> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_5> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_4> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_38> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_37> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_36> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_35> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_34> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_33> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_32> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_31> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_30> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_29> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_28> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_27> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_26> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_25> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_24> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_23> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_22> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_21> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_20> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_19> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_18> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_17> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_16> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_15> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_14> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_13> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_12> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_11> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_10> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit_0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf_bit> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_9> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_8> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_7> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_6> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_5> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_4> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_21> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_20> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_19> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_18> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_17> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_16> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_15> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_14> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_13> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_12> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_11> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_10> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32_0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <buf32> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <is_Transmit>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 21                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | enb                       (positive)           |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | in_start_tx                                    |
+    | Power Up State     | in_crc_end                                     |
+    | Recovery State     | in_start_tx                                    |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <buf_tx>.
+    Found 32-bit register for signal <CRC>.
+    Found 11-bit comparator greater for signal <CRC$cmp_gt0000> created at line 347.
+    Found 1-bit register for signal <get_next_reg>.
+    Found 11-bit register for signal <ind1_reg>.
+    Found 11-bit adder for signal <is_Transmit$add0000> created at line 533.
+    Found 11-bit comparator less for signal <is_Transmit$cmp_lt0000> created at line 286.
+    Found 11-bit comparator less for signal <is_Transmit$cmp_lt0001> created at line 535.
+    Found 4-bit register for signal <TX_DATA_reg>.
+    Found 1-bit register for signal <TX_EN_reg>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  57 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <Transmit> synthesized.
+
+
+Synthesizing Unit <Gen_Imp>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/Gen_Imp.vhd".
+    Found finite state machine <FSM_1> for signal <is_Gen_Imp>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | enb                       (positive)           |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | in_wait                                        |
+    | Power Up State     | in_reset                                       |
+    | Recovery State     | in_wait                                        |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit register for signal <acc>.
+    Found 32-bit adder for signal <acc$share0000> created at line 72.
+    Found 32-bit comparator less for signal <is_Gen_Imp$cmp_lt0000> created at line 84.
+    Found 32-bit comparator less for signal <is_Gen_Imp$cmp_lt0001> created at line 91.
+    Found 1-bit register for signal <res_tr_reg>.
+    Found 1-bit register for signal <start_ev_reg>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <Gen_Imp> synthesized.
+
+
+Synthesizing Unit <alpha4bit2uint8>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/alpha4bit2uint8.vhd".
+WARNING:Xst:646 - Signal <u_unsigned<1><7>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <u_unsigned<2><7:6>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <u_unsigned<3><7:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <alpha4bit2uint8> synthesized.
+
+
+Synthesizing Unit <Receive>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/Receive.vhd".
+    Found finite state machine <FSM_2> for signal <is_Receive>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 20                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | enb                       (positive)           |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | in_start_rx                                    |
+    | Power Up State     | in_error                                       |
+    | Recovery State     | in_start_rx                                    |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <buf_rx>.
+    Found 8-bit register for signal <Data_reg>.
+    Found 11-bit register for signal <ind1_reg>.
+    Found 11-bit adder for signal <ind1_reg_next$addsub0000> created at line 167.
+    Found 11-bit comparator less for signal <is_Receive$cmp_lt0000> created at line 166.
+    Found 1-bit register for signal <Pack_on_line>.
+    Found 1-bit register for signal <put_next_reg>.
+    Found 1-bit register for signal <ram_en_reg>.
+    Found 1-bit register for signal <read_ev_reg>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  31 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <Receive> synthesized.
+
+
+Synthesizing Unit <int2bit>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/int2bit.vhd".
+WARNING:Xst:646 - Signal <Bitwise_Operator7_out1<6:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Bitwise_Operator6_out1<5:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Bitwise_Operator5_out1<4:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Bitwise_Operator4_out1<3:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Bitwise_Operator3_out1<2:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Bitwise_Operator2_out1<1:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Bitwise_Operator1_out1<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <int2bit> synthesized.
+
+
+Synthesizing Unit <Instruction_Decoder>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/Instruction_Decoder.vhd".
+WARNING:Xst:646 - Signal <Shift_Arithmetic_out1<15:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Operand_address_out1<15:12>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Code_of_operation_out1<11:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <Instruction_Decoder> synthesized.
+
+
+Synthesizing Unit <alpha12_bit_Program_Counter>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/alpha12_bit_Program_Counter.vhd".
+    Found 12-bit adder for signal <Add_out1>.
+    Found 12-bit register for signal <Program_Counter_out1>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <alpha12_bit_Program_Counter> synthesized.
+
+
+Synthesizing Unit <alpha32_bit_Acumulator_resource>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/alpha32_bit_Acumulator_resource.vhd".
+    Found 32-bit register for signal <Integer_Delay2_out1>.
+    Found 32-bit 4-to-1 multiplexer for signal <Switch1_out1>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred  32 Multiplexer(s).
+Unit <alpha32_bit_Acumulator_resource> synthesized.
+
+
+Synthesizing Unit <Rise_detect>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/Rise_detect.vhd".
+    Found 1-bit register for signal <BRAM3_out1>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Rise_detect> synthesized.
+
+
+Synthesizing Unit <Rise_detect1>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/Rise_detect1.vhd".
+    Found 1-bit register for signal <BRAM3_out1>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <Rise_detect1> synthesized.
+
+
+Synthesizing Unit <In_Port_Control>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/In_Port_Control.vhd".
+    Found 2-bit register for signal <Switch5_out1_last_value>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <In_Port_Control> synthesized.
+
+
+Synthesizing Unit <Register_rsvd>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/Register_rsvd.vhd".
+    Found 32-bit register for signal <Mux_out1_last_value>.
+    Found 8-bit register for signal <PC_Out0_out1>.
+    Found 8-bit register for signal <PC_Out1_out1>.
+    Found 8-bit register for signal <PC_Out2_out1>.
+    Found 8-bit register for signal <PC_Out3_out1>.
+    Summary:
+	inferred  64 D-type flip-flop(s).
+Unit <Register_rsvd> synthesized.
+
+
+Synthesizing Unit <Register1>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/Register1.vhd".
+    Found 32-bit register for signal <DAC_A_out1>.
+    Found 32-bit register for signal <DAC_B_out1>.
+    Found 64-bit register for signal <Mux_out1_last_value>.
+    Summary:
+	inferred 128 D-type flip-flop(s).
+Unit <Register1> synthesized.
+
+
+Synthesizing Unit <Normalize_mul>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/Normalize_mul.vhd".
+WARNING:Xst:646 - Signal <y_2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sub_temp> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sub_cast> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <p_0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <droppedbits_0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <c_uint_1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 9-bit adder for signal <$add0000> created at line 70.
+    Found 9-bit adder for signal <$add0001> created at line 70.
+    Found 9-bit adder for signal <$add0002> created at line 70.
+    Found 9-bit adder for signal <$add0003> created at line 70.
+    Found 9-bit adder for signal <$add0004> created at line 70.
+    Found 9-bit adder for signal <$add0005> created at line 70.
+    Found 9-bit adder for signal <$add0006> created at line 70.
+    Found 9-bit adder for signal <$add0007> created at line 70.
+    Found 9-bit adder for signal <$add0008> created at line 70.
+    Found 9-bit adder for signal <$add0009> created at line 70.
+    Found 9-bit adder for signal <$add0010> created at line 70.
+    Found 9-bit adder for signal <$add0011> created at line 70.
+    Found 9-bit adder for signal <$add0012> created at line 70.
+    Found 9-bit adder for signal <$add0013> created at line 70.
+    Found 9-bit adder for signal <$add0014> created at line 70.
+    Found 9-bit adder for signal <$add0015> created at line 70.
+    Found 9-bit adder for signal <$add0016> created at line 70.
+    Found 9-bit adder for signal <$add0017> created at line 70.
+    Found 9-bit adder for signal <$add0018> created at line 70.
+    Found 9-bit adder for signal <$add0019> created at line 70.
+    Found 9-bit adder for signal <$add0020> created at line 70.
+    Found 9-bit adder for signal <$add0021> created at line 70.
+    Found 9-bit adder for signal <$add0022> created at line 70.
+    Found 9-bit adder for signal <$add0023> created at line 70.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0001> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0002> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0003> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0004> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0005> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0006> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0007> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0008> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0009> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0010> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0011> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0012> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0013> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0014> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0015> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0016> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0017> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0018> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0019> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0020> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0021> created at line 69.
+    Found 48-bit comparator equal for signal <buf$cmp_eq0022> created at line 69.
+    Found 48-bit comparator equal for signal <c$cmp_eq0000> created at line 69.
+    Found 8-bit comparator greatequal for signal <droppedBits$cmp_ge0000> created at line 92.
+    Found 8-bit comparator lessequal for signal <k$cmp_le0000> created at line 108.
+    Found 48-bit comparator equal for signal <p$cmp_eq0000> created at line 69.
+    Found 33-bit adder for signal <p_0$sub0000> created at line 111.
+    Found 32-bit adder for signal <sub_temp$sub0000> created at line 97.
+    Found 48-bit comparator equal for signal <y1$cmp_eq0000> created at line 101.
+    Found 8-bit comparator greatequal for signal <y1$cmp_ge0000> created at line 115.
+    Found 8-bit comparator greater for signal <y1$cmp_gt0000> created at line 90.
+    Found 48-bit 4-to-1 multiplexer for signal <y1$mux0001> created at line 90.
+    Found 48-bit shifter logical left for signal <y1$shift0003> created at line 102.
+    Found 48-bit shifter logical right for signal <y1$shift0004> created at line 118.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0000> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0001> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0002> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0003> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0004> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0005> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0006> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0007> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0008> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0009> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0010> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0011> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0012> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0013> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0014> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0015> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0016> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0017> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0018> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0019> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0020> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0021> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0022> created at line 79.
+    Found 48-bit comparator equal for signal <y_2$cmp_eq0023> created at line 79.
+    Summary:
+	inferred  26 Adder/Subtractor(s).
+	inferred  53 Comparator(s).
+	inferred  48 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <Normalize_mul> synthesized.
+
+
+Synthesizing Unit <Variable_bitshift>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/Variable_bitshift.vhd".
+    Found 9-bit adder for signal <k_0$sub0000> created at line 60.
+    Found 9-bit adder for signal <t_0$sub0000> created at line 50.
+    Found 32-bit 4-to-1 multiplexer for signal <y_tmp>.
+    Found 8-bit comparator less for signal <y_tmp$cmp_lt0000> created at line 59.
+    Found 8-bit comparator less for signal <y_tmp$cmp_lt0001> created at line 73.
+    Found 8-bit comparator less for signal <y_tmp$cmp_lt0002> created at line 78.
+    Found 32-bit shifter logical right for signal <y_tmp$shift0004> created at line 74.
+    Found 32-bit shifter logical left for signal <y_tmp$shift0005> created at line 79.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+	inferred  32 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <Variable_bitshift> synthesized.
+
+
+Synthesizing Unit <Normalize>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/Normalize.vhd".
+    Found 9-bit adder for signal <$add0000> created at line 58.
+    Found 9-bit adder for signal <$add0001> created at line 58.
+    Found 9-bit adder for signal <$add0002> created at line 58.
+    Found 9-bit adder for signal <$add0003> created at line 58.
+    Found 9-bit adder for signal <$add0004> created at line 58.
+    Found 9-bit adder for signal <$add0005> created at line 58.
+    Found 9-bit adder for signal <$add0006> created at line 58.
+    Found 9-bit adder for signal <$add0007> created at line 58.
+    Found 9-bit adder for signal <$add0008> created at line 58.
+    Found 9-bit adder for signal <$add0009> created at line 58.
+    Found 9-bit adder for signal <$add0010> created at line 58.
+    Found 9-bit adder for signal <$add0011> created at line 58.
+    Found 9-bit adder for signal <$add0012> created at line 58.
+    Found 9-bit adder for signal <$add0013> created at line 58.
+    Found 9-bit adder for signal <$add0014> created at line 58.
+    Found 9-bit adder for signal <$add0015> created at line 58.
+    Found 9-bit adder for signal <$add0016> created at line 58.
+    Found 9-bit adder for signal <$add0017> created at line 58.
+    Found 9-bit adder for signal <$add0018> created at line 58.
+    Found 9-bit adder for signal <$add0019> created at line 58.
+    Found 9-bit adder for signal <$add0020> created at line 58.
+    Found 9-bit adder for signal <$add0021> created at line 58.
+    Found 9-bit adder for signal <$add0022> created at line 58.
+    Found 9-bit adder for signal <$add0023> created at line 58.
+    Found 8-bit comparator less for signal <c_0$cmp_lt0000> created at line 72.
+    Found 8-bit comparator less for signal <c_0$cmp_lt0001> created at line 86.
+    Found 8-bit comparator less for signal <c_0$cmp_lt0002> created at line 91.
+    Found 32-bit 4-to-1 multiplexer for signal <c_0$mux0002> created at line 72.
+    Found 32-bit shifter logical right for signal <c_0$shift0004> created at line 87.
+    Found 32-bit shifter logical left for signal <c_0$shift0005> created at line 92.
+    Found 9-bit adder for signal <p_0$sub0000> created at line 73.
+    Summary:
+	inferred  25 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+	inferred  32 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <Normalize> synthesized.
+
+
+Synthesizing Unit <Int_to_Single1>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/Int_to_Single1.vhd".
+WARNING:Xst:646 - Signal <y_1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sub_temp> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sub_cast> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <droppedbits_0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast_0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 11-bit adder for signal <$add0001> created at line 91.
+    Found 11-bit adder for signal <$add0002> created at line 91.
+    Found 11-bit adder for signal <$add0003> created at line 91.
+    Found 11-bit adder for signal <$add0004> created at line 91.
+    Found 11-bit adder for signal <$add0005> created at line 91.
+    Found 11-bit adder for signal <$add0006> created at line 91.
+    Found 11-bit adder for signal <$add0007> created at line 91.
+    Found 11-bit adder for signal <$add0008> created at line 91.
+    Found 11-bit adder for signal <$add0009> created at line 91.
+    Found 11-bit adder for signal <$add0010> created at line 91.
+    Found 11-bit adder for signal <$add0011> created at line 91.
+    Found 11-bit adder for signal <$add0012> created at line 91.
+    Found 11-bit adder for signal <$add0013> created at line 91.
+    Found 11-bit adder for signal <$add0014> created at line 91.
+    Found 11-bit adder for signal <$add0015> created at line 91.
+    Found 11-bit adder for signal <$add0016> created at line 91.
+    Found 11-bit adder for signal <$add0017> created at line 91.
+    Found 11-bit adder for signal <$add0018> created at line 91.
+    Found 11-bit adder for signal <$add0019> created at line 91.
+    Found 11-bit adder for signal <$add0020> created at line 91.
+    Found 11-bit adder for signal <$add0021> created at line 91.
+    Found 7-bit adder for signal <add_cast_3$sub0000> created at line 146.
+    Found 11-bit adder for signal <add_temp$add0000> created at line 107.
+    Found 9-bit adder for signal <add_temp_1$add0000> created at line 148.
+    Found 8-bit comparator greatequal for signal <droppedBits$cmp_ge0000> created at line 121.
+    Found 5-bit adder for signal <p$addsub0000> created at line 100.
+    Found 5-bit adder for signal <p$addsub0001> created at line 100.
+    Found 5-bit adder for signal <p$addsub0002> created at line 100.
+    Found 5-bit adder for signal <p$addsub0003> created at line 100.
+    Found 5-bit adder for signal <p$addsub0004> created at line 100.
+    Found 5-bit adder for signal <p$addsub0005> created at line 100.
+    Found 5-bit adder for signal <p$addsub0006> created at line 100.
+    Found 5-bit adder for signal <p$addsub0007> created at line 100.
+    Found 5-bit adder for signal <p$addsub0008> created at line 100.
+    Found 5-bit adder for signal <p$addsub0009> created at line 100.
+    Found 5-bit adder for signal <p$addsub0010> created at line 100.
+    Found 5-bit adder for signal <p$addsub0011> created at line 100.
+    Found 5-bit adder for signal <p$addsub0012> created at line 100.
+    Found 5-bit adder for signal <p$addsub0013> created at line 100.
+    Found 5-bit adder for signal <p$addsub0014> created at line 100.
+    Found 5-bit adder for signal <p$addsub0015> created at line 100.
+    Found 5-bit adder for signal <p$addsub0016> created at line 100.
+    Found 5-bit adder for signal <p$addsub0017> created at line 100.
+    Found 5-bit adder for signal <p$addsub0018> created at line 100.
+    Found 5-bit adder for signal <p$addsub0019> created at line 100.
+    Found 5-bit adder for signal <p$addsub0020> created at line 100.
+    Found 5-bit adder for signal <p_0$addsub0000> created at line 116.
+    Found 32-bit adder for signal <sub_temp$sub0000> created at line 126.
+    Found 8-bit comparator greater for signal <y1$cmp_gt0000> created at line 120.
+    Found 24-bit shifter logical left for signal <y1$shift0000> created at line 131.
+    Summary:
+	inferred  47 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <Int_to_Single1> synthesized.
+
+
+Synthesizing Unit <gen_tick>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/gen_tick.vhd".
+WARNING:Xst:1780 - Signal <rest> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit comparator less for signal <clk1$cmp_lt0000> created at line 51.
+    Found 8-bit comparator greatequal for signal <clk1s$cmp_ge0000> created at line 52.
+    Found 8-bit comparator less for signal <clk1s$cmp_lt0000> created at line 52.
+    Found 8-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   3 Comparator(s).
+Unit <gen_tick> synthesized.
+
+
+Synthesizing Unit <counter_test>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/counter_test.vhd".
+WARNING:Xst:1780 - Signal <count_reg_n> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit up counter for signal <count_reg>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <counter_test> synthesized.
+
+
+Synthesizing Unit <shift_reg_test>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/shift_reg_test.vhd".
+WARNING:Xst:1780 - Signal <reg_buf_n> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 12-bit register for signal <reg_buf>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+Unit <shift_reg_test> synthesized.
+
+
+Synthesizing Unit <shift_reg_out>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/shift_reg_out.vhd".
+WARNING:Xst:1780 - Signal <reg_buf_n> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 16-bit register for signal <reg_buf>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <shift_reg_out> synthesized.
+
+
+Synthesizing Unit <spi_rom>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/spi_rom.vhd".
+WARNING:Xst:1781 - Signal <ROM> is used but never assigned. Tied to default value.
+    Found 72x4-bit ROM for signal <rdata>.
+    Found 4-bit register for signal <DATA>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   4 D-type flip-flop(s).
+Unit <spi_rom> synthesized.
+
+
+Synthesizing Unit <Single_to_Uint>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/Single_to_Uint.vhd".
+WARNING:Xst:646 - Signal <z_0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cast> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <absk1_0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <absk1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 16-bit comparator less for signal <c$cmp_lt0000> created at line 64.
+    Found 8-bit comparator less for signal <c$cmp_lt0001> created at line 71.
+    Found 32-bit 4-to-1 multiplexer for signal <c$mux0001> created at line 64.
+    Found 32-bit shifter logical right for signal <c$shift0004> created at line 68.
+    Found 32-bit shifter logical left for signal <c$shift0005> created at line 72.
+    Found 32-bit subtractor for signal <sub_temp$sub0000> created at line 61.
+    Found 8-bit comparator greatequal for signal <y_tmp$cmp_ge0000> created at line 58.
+    Found 33-bit adder for signal <z_0$sub0000> created at line 65.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+	inferred  32 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <Single_to_Uint> synthesized.
+
+
+Synthesizing Unit <test_lan>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/test_lan.vhd".
+    Found 1-bit register for signal <Integer_Delay1_out1>.
+    Found 1-bit register for signal <Integer_Delay2_out1>.
+    Found 1-bit register for signal <Integer_Delay3_out1>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <test_lan> synthesized.
+
+
+Synthesizing Unit <generator1>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/Generator1.vhd".
+    Found 1-bit register for signal <Integer_Delay1_out1>.
+    Found 1-bit register for signal <Integer_Delay4_out1>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <generator1> synthesized.
+
+
+Synthesizing Unit <test_rx>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/test_rx.vhd".
+    Found 1-bit register for signal <Integer_Delay3_out1>.
+    Found 1-bit register for signal <Integer_Delay4_out1>.
+    Found 1-bit register for signal <Integer_Delay5_out1>.
+    Found 4-bit register for signal <Integer_Delay6_out1>.
+    Found 1-bit register for signal <Integer_Delay7_out1>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <test_rx> synthesized.
+
+
+Synthesizing Unit <int2single>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/int2single.vhd".
+Unit <int2single> synthesized.
+
+
+Synthesizing Unit <ab_contr>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/ab_contr.vhd".
+WARNING:Xst:1780 - Signal <adc2en> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <adc1en> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 3-bit register for signal <csl>.
+    Found 1-bit register for signal <sdi>.
+    Found 8-bit comparator less for signal <start_ctrl$cmp_lt0000> created at line 162.
+    Found 1-bit register for signal <start_d>.
+    Found 1-bit register for signal <start_reg>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <ab_contr> synthesized.
+
+
+Synthesizing Unit <single_int>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/single_int.vhd".
+Unit <single_int> synthesized.
+
+
+Synthesizing Unit <IN_OUT_Controller>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/IN_OUT_Controller.vhd".
+    Found 4-bit adder for signal <Add1_add_temp>.
+    Found 14-bit adder for signal <Add2_out1>.
+    Found 11-bit adder for signal <Add_add_temp>.
+    Found 12-bit adder for signal <Add_add_temp_1>.
+    Found 1-bit register for signal <BRAM3_out1>.
+    Found 5-bit comparator less for signal <Compare_To_Constant1_out1$cmp_lt0000> created at line 272.
+    Found 3-bit register for signal <Offset_out1>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <IN_OUT_Controller> synthesized.
+
+
+Synthesizing Unit <fp_mul>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/fp_mul.vhd".
+WARNING:Xst:646 - Signal <Normalize_mul_out1_unsigned<31:23>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Gain_cast<47>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Gain_cast<21:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Gain2_cast<45:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Gain1_cast<47>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Gain1_cast<21:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit xor2 for signal <A_sign_1>.
+    Found 32-bit adder for signal <Add2_add_temp>.
+    Found 32-bit subtractor for signal <Add3_sub_temp>.
+    Found 32-bit subtractor for signal <Add4_sub_temp>.
+    Found 48-bit comparator equal for signal <Gain2_out1$cmp_eq0000> created at line 123.
+    Found 24x24-bit multiplier for signal <Product_out1>.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+	inferred   1 Comparator(s).
+Unit <fp_mul> synthesized.
+
+
+Synthesizing Unit <fp_sum>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/fp_sum.vhd".
+WARNING:Xst:646 - Signal <Variable_bitshift_out1_unsigned<31:24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Variable_bitshift1_out1_unsigned<31:24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Normalize_out1_unsigned<31:23>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit xor2 for signal <A_sign_1>.
+    Found 32-bit subtractor for signal <Add1_sub_temp>.
+    Found 32-bit adder for signal <Add2_add_temp>.
+    Found 32-bit subtractor for signal <Add3_sub_temp>.
+    Found 32-bit subtractor for signal <Add5_sub_temp>.
+    Found 32-bit subtractor for signal <Add_sub_temp>.
+    Found 24-bit comparator less for signal <Relational_Operator1_relop1$cmp_lt0000> created at line 179.
+    Found 8-bit comparator less for signal <Relational_Operator_relop1$cmp_lt0000> created at line 135.
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <fp_sum> synthesized.
+
+
+Synthesizing Unit <fp_wrapper>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/fp_wrapper.vhd".
+Unit <fp_wrapper> synthesized.
+
+
+Synthesizing Unit <ivedsp>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/ivedsp.vhd".
+WARNING:Xst:646 - Signal <Instruction_Decoder_out5_unsigned<11:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <Integer_Delay1_out1>.
+    Found 1-bit register for signal <Integer_Delay2_out1>.
+    Found 32-bit register for signal <Integer_Delay3_out1>.
+    Found 32-bit register for signal <Integer_Delay4_out1>.
+    Found 3-bit register for signal <Integer_Delay5_reg>.
+    Found 1-bit register for signal <Integer_Delay6_out1>.
+    Summary:
+	inferred  70 D-type flip-flop(s).
+Unit <ivedsp> synthesized.
+
+
+Synthesizing Unit <contr1_conv>.
+    Related source file is "D:/Dan/FPGA_FPU/ise_project_fpu/contr1_conv.vhd".
+WARNING:Xst:646 - Signal <ce_out_buf1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ce_out_buf> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <contr1_conv> synthesized.
+
+
+Synthesizing Unit <Top_Module>.
+    Related source file is "Top_Module.vf".
+Unit <Top_Module> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16384x8-bit dual-port RAM                             : 1
+ 2048x32-bit single-port RAM                           : 1
+ 2048x8-bit dual-port RAM                              : 1
+# ROMs                                                 : 4
+ 1024x16-bit ROM                                       : 1
+ 32x8-bit ROM                                          : 2
+ 72x4-bit ROM                                          : 1
+# Multipliers                                          : 1
+ 24x24-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 175
+ 11-bit adder                                          : 47
+ 12-bit adder                                          : 2
+ 14-bit adder                                          : 1
+ 14-bit subtractor                                     : 1
+ 32-bit adder                                          : 6
+ 32-bit subtractor                                     : 10
+ 33-bit adder                                          : 3
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 44
+ 7-bit adder                                           : 2
+ 8-bit adder                                           : 3
+ 9-bit adder                                           : 55
+# Counters                                             : 3
+ 32-bit up counter                                     : 1
+ 8-bit up counter                                      : 2
+# Registers                                            : 78
+ 1-bit register                                        : 29
+ 11-bit register                                       : 2
+ 12-bit register                                       : 3
+ 16-bit register                                       : 3
+ 2-bit register                                        : 1
+ 3-bit register                                        : 2
+ 32-bit register                                       : 6
+ 4-bit register                                        : 3
+ 8-bit register                                        : 29
+# Comparators                                          : 90
+ 11-bit comparator greatequal                          : 1
+ 11-bit comparator greater                             : 1
+ 11-bit comparator less                                : 6
+ 16-bit comparator less                                : 2
+ 24-bit comparator less                                : 1
+ 32-bit comparator less                                : 2
+ 48-bit comparator equal                               : 50
+ 5-bit comparator less                                 : 1
+ 8-bit comparator greatequal                           : 7
+ 8-bit comparator greater                              : 3
+ 8-bit comparator less                                 : 15
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 7
+ 32-bit 4-to-1 multiplexer                             : 6
+ 48-bit 4-to-1 multiplexer                             : 1
+# Logic shifters                                       : 14
+ 24-bit shifter logical left                           : 2
+ 32-bit shifter logical left                           : 5
+ 32-bit shifter logical right                          : 5
+ 48-bit shifter logical left                           : 1
+ 48-bit shifter logical right                          : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <XLXI_66/u_Receive/is_Receive/FSM> on signal <is_Receive[1:4]> with user encoding.
+--------------------------
+ State        | Encoding
+--------------------------
+ in_error     | 0000
+ in_read      | 0001
+ in_read_rdy  | 0010
+ in_read_rdy1 | 0011
+ in_start_rx  | 0100
+ in_wait1     | 0101
+ in_wait2     | 0110
+ in_wait_low  | 0111
+ in_writeram  | 1000
+--------------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <XLXI_53/u_Gen_Imp/is_Gen_Imp/FSM> on signal <is_Gen_Imp[1:3]> with gray encoding.
+----------------------
+ State    | Encoding
+----------------------
+ in_reset | 000
+ in_start | 010
+ in_wait  | 001
+ in_wait1 | 011
+ in_wait3 | 110
+----------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <XLXI_5/u_Transmit/is_Transmit/FSM> on signal <is_Transmit[1:4]> with sequential encoding.
+-----------------------------
+ State           | Encoding
+-----------------------------
+ in_crc_end      | 0000
+ in_data_ready   | 0101
+ in_get_data     | 0110
+ in_start_tx     | 0001
+ in_wait10       | 0011
+ in_wait12       | 0111
+ in_wait13       | 1001
+ in_wait14       | 1000
+ in_wait_for_ev  | 0100
+ in_wait_for_ev1 | 0010
+-----------------------------
+
+Synthesizing (advanced) Unit <alpha12_bit_Program_Counter>.
+The following registers are absorbed into accumulator <Program_Counter_out1>: 1 register on signal <Program_Counter_out1>.
+Unit <alpha12_bit_Program_Counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <prog_mem>.
+INFO:Xst:3044 - The ROM <Mrom__varindex0000> will be implemented as a read-only BLOCK RAM, absorbing the register: <do>.
+INFO:Xst:3225 - The RAM <Mrom__varindex0000> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 16-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <en>            | high     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to signal <do>            |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <prog_mem> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ram1>.
+INFO:Xst:3226 - The RAM <Mram_RAM> will be implemented as a BLOCK RAM, absorbing the following register(s): <do>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2048-word x 8-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <we>            | high     |
+    |     addrA          | connected to signal <addrw>         |          |
+    |     diA            | connected to signal <di>            |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 2048-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <addrr>         |          |
+    |     doB            | connected to signal <do>            |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <ram1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ram1dual>.
+INFO:Xst:3226 - The RAM <Mram_RAM> will be implemented as a BLOCK RAM, absorbing the following register(s): <do>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16384-word x 8-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <we>            | high     |
+    |     addrA          | connected to signal <addrw>         |          |
+    |     diA            | connected to signal <di>            |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 16384-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <addrr>         |          |
+    |     doB            | connected to signal <do>            |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <ram1dual> synthesized (advanced).
+
+Synthesizing (advanced) Unit <real_control>.
+INFO:Xst:3226 - The RAM <Mram_RAM> will be implemented as a BLOCK RAM, absorbing the following register(s): <do>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2048-word x 32-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <en>            | high     |
+    |     weA            | connected to signal <we>            | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <di>            |          |
+    |     doA            | connected to signal <do>            |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <real_control> synthesized (advanced).
+
+Synthesizing (advanced) Unit <spi_rom>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_rdata> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <spi_rom> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 3
+# RAMs                                                 : 4
+ 1024x16-bit single-port block RAM                     : 1
+ 16384x8-bit dual-port block RAM                       : 1
+ 2048x32-bit single-port block RAM                     : 1
+ 2048x8-bit dual-port block RAM                        : 1
+# ROMs                                                 : 3
+ 32x8-bit ROM                                          : 2
+ 72x4-bit ROM                                          : 1
+# Multipliers                                          : 1
+ 24x24-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 174
+ 11-bit adder                                          : 47
+ 12-bit adder                                          : 2
+ 14-bit adder                                          : 1
+ 14-bit subtractor                                     : 1
+ 16-bit subtractor                                     : 2
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 6
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 44
+ 7-bit adder                                           : 2
+ 8-bit adder                                           : 7
+ 8-bit adder carry in                                  : 1
+ 8-bit subtractor                                      : 2
+ 9-bit adder                                           : 55
+# Counters                                             : 3
+ 32-bit up counter                                     : 1
+ 8-bit up counter                                      : 2
+# Accumulators                                         : 1
+ 12-bit up loadable accumulator                        : 1
+# Registers                                            : 503
+ Flip-Flops                                            : 503
+# Comparators                                          : 90
+ 11-bit comparator greatequal                          : 1
+ 11-bit comparator greater                             : 1
+ 11-bit comparator less                                : 6
+ 16-bit comparator less                                : 2
+ 24-bit comparator less                                : 1
+ 32-bit comparator less                                : 2
+ 48-bit comparator equal                               : 50
+ 5-bit comparator less                                 : 1
+ 8-bit comparator greatequal                           : 7
+ 8-bit comparator greater                              : 3
+ 8-bit comparator less                                 : 15
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 7
+ 32-bit 4-to-1 multiplexer                             : 6
+ 48-bit 4-to-1 multiplexer                             : 1
+# Logic shifters                                       : 14
+ 24-bit shifter logical left                           : 2
+ 32-bit shifter logical left                           : 5
+ 32-bit shifter logical right                          : 5
+ 48-bit shifter logical left                           : 1
+ 48-bit shifter logical right                          : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Top_Module> ...
+
+Optimizing unit <alpha4bit2uint8> ...
+
+Optimizing unit <int2bit> ...
+
+Optimizing unit <Instruction_Decoder> ...
+
+Optimizing unit <ram1dual> ...
+
+Optimizing unit <rom1> ...
+
+Optimizing unit <ram1> ...
+
+Optimizing unit <timer10ms> ...
+
+Optimizing unit <real_control> ...
+
+Optimizing unit <prog_mem> ...
+
+Optimizing unit <Transmit> ...
+
+Optimizing unit <Gen_Imp> ...
+
+Optimizing unit <Receive> ...
+
+Optimizing unit <alpha12_bit_Program_Counter> ...
+
+Optimizing unit <alpha32_bit_Acumulator_resource> ...
+
+Optimizing unit <Rise_detect> ...
+
+Optimizing unit <Rise_detect1> ...
+
+Optimizing unit <In_Port_Control> ...
+
+Optimizing unit <Register_rsvd> ...
+
+Optimizing unit <Register1> ...
+
+Optimizing unit <Normalize_mul> ...
+
+Optimizing unit <Variable_bitshift> ...
+
+Optimizing unit <Normalize> ...
+
+Optimizing unit <Int_to_Single1> ...
+
+Optimizing unit <gen_tick> ...
+
+Optimizing unit <counter_test> ...
+
+Optimizing unit <shift_reg_test> ...
+
+Optimizing unit <shift_reg_out> ...
+
+Optimizing unit <spi_rom> ...
+
+Optimizing unit <Single_to_Uint> ...
+
+Optimizing unit <test_lan> ...
+
+Optimizing unit <generator1> ...
+
+Optimizing unit <test_rx> ...
+
+Optimizing unit <int2single> ...
+
+Optimizing unit <ab_contr> ...
+
+Optimizing unit <single_int> ...
+
+Optimizing unit <IN_OUT_Controller> ...
+
+Optimizing unit <fp_mul> ...
+
+Optimizing unit <fp_sum> ...
+
+Optimizing unit <fp_wrapper> ...
+
+Optimizing unit <ivedsp> ...
+
+Optimizing unit <contr1_conv> ...
+WARNING:Xst:2677 - Node <Program_Counter_out1_10> of sequential type is unconnected in block <u_12_bit_Program_Counter>.
+WARNING:Xst:2677 - Node <Program_Counter_out1_11> of sequential type is unconnected in block <u_12_bit_Program_Counter>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top_Module, actual ratio is 70.
+
+Final Macro Processing ...
+
+Processing Unit <u_ivedsp> :
+	Found 2-bit shift register for signal <Integer_Delay5_reg_2>.
+Unit <u_ivedsp> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 570
+ Flip-Flops                                            : 570
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Top_Module.ngr
+Top Level Output File Name         : Top_Module
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+
+Design Statistics
+# IOs                              : 28
+
+Cell Usage :
+# BELS                             : 6440
+#      GND                         : 20
+#      INV                         : 32
+#      LUT1                        : 126
+#      LUT2                        : 489
+#      LUT2_D                      : 43
+#      LUT2_L                      : 31
+#      LUT3                        : 1113
+#      LUT3_D                      : 47
+#      LUT3_L                      : 212
+#      LUT4                        : 2660
+#      LUT4_D                      : 49
+#      LUT4_L                      : 328
+#      MULT_AND                    : 9
+#      MUXCY                       : 380
+#      MUXF5                       : 572
+#      VCC                         : 17
+#      XORCY                       : 312
+# FlipFlops/Latches                : 571
+#      FD                          : 66
+#      FDCE                        : 174
+#      FDE                         : 282
+#      FDPE                        : 4
+#      FDR                         : 5
+#      FDRE                        : 40
+# RAMS                             : 14
+#      RAMB16_S18                  : 1
+#      RAMB16_S1_S1                : 8
+#      RAMB16_S9                   : 4
+#      RAMB16_S9_S9                : 1
+# Shift Registers                  : 1
+#      SRL16                       : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 27
+#      IBUF                        : 9
+#      OBUF                        : 18
+# MULTs                            : 4
+#      MULT18X18SIO                : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                     2813  out of   4656    60%  
+ Number of Slice Flip Flops:            571  out of   9312     6%  
+ Number of 4 input LUTs:               5131  out of   9312    55%  
+    Number used as logic:              5130
+    Number used as Shift registers:       1
+ Number of IOs:                          28
+ Number of bonded IOBs:                  28  out of    232    12%  
+ Number of BRAMs:                        14  out of     20    70%  
+ Number of MULT18X18SIOs:                 4  out of     20    20%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------+-----------------------------------+-------+
+Clock Signal                                            | Clock buffer(FF name)             | Load  |
+--------------------------------------------------------+-----------------------------------+-------+
+clk                                                     | BUFGP                             | 517   |
+XLXI_162/clock1/clk1s1(XLXI_162/clock1/clk1s_and00001:O)| BUFG(*)(XLXI_162/start_d)         | 33    |
+XLXI_162/clock1/count_7                                 | NONE(XLXI_162/conter1/count_reg_0)| 36    |
+--------------------------------------------------------+-----------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+----------------------------------------------------------------+----------------------------------+-------+
+Control Signal                                                  | Buffer(FF name)                  | Load  |
+----------------------------------------------------------------+----------------------------------+-------+
+XLXN_716(XLXI_75:G)                                             | NONE(XLXI_53/Integer_Delay1_out1)| 114   |
+XLXI_53/u_Gen_Imp/res_tr(XLXI_53/u_Gen_Imp/res_tr_reg_next_f5:O)| NONE(XLXI_5/Integer_Delay1_out1) | 64    |
+----------------------------------------------------------------+----------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 67.104ns (Maximum Frequency: 14.902MHz)
+   Minimum input arrival time before clock: 1.754ns
+   Maximum output required time after clock: 11.373ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 67.104ns (frequency: 14.902MHz)
+  Total number of paths / destination ports: 16858492299677266000000 / 1070
+-------------------------------------------------------------------------
+Delay:               67.104ns (Levels of Logic = 169)
+  Source:            XLXI_80/Mrom__varindex0000 (RAM)
+  Destination:       XLXI_148/u_ivedsp/Integer_Delay3_out1_23 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: XLXI_80/Mrom__varindex0000 to XLXI_148/u_ivedsp/Integer_Delay3_out1_23
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S18:CLK->DO15    1   2.436   0.426  Mrom__varindex0000 (do<15>)
+     end scope: 'XLXI_80'
+     begin scope: 'XLXI_148'
+     begin scope: 'u_ivedsp'
+     LUT2:I1->O            8   0.612   0.795  Switch_out1<15>1 (Switch_out1<15>)
+     begin scope: 'u_Instruction_Decoder'
+     LUT4:I0->O           73   0.612   1.114  Compare_To_Constant8_out1_cmp_eq00001 (IN_Port)
+     end scope: 'u_Instruction_Decoder'
+     begin scope: 'u_IN_OUT_Controller'
+     LUT3:I2->O           68   0.612   1.113  Compare_To_Constant1_out1_11 (Compare_To_Constant1_out1_1)
+     begin scope: 'u_Register'
+     LUT3:I2->O            1   0.612   0.387  Mux_out1_bypass_3_mux0000<7>1 (PC_Out<3><7>)
+     end scope: 'u_Register'
+     LUT3:I2->O            2   0.612   0.410  Multiport_Switch_out1_3_mux0001<7>1 (PC_Out<3><7>)
+     end scope: 'u_IN_OUT_Controller'
+     end scope: 'u_ivedsp'
+     begin scope: 'u_ivedsp'
+     begin scope: 'u_32_bit_Acumulator_resource'
+     LUT3:I2->O            6   0.612   0.569  Mmux_Switch1_out160 (data_out<7>)
+     end scope: 'u_32_bit_Acumulator_resource'
+     end scope: 'u_ivedsp'
+     end scope: 'XLXI_148'
+     begin scope: 'XLXI_150'
+     begin scope: 'u_fp_mul'
+     MULT18X18SIO:A7->P17    1   4.331   0.426  Mmult_Product_out1_submult_0 (Mmult_Product_out1_submult_0_P_to_Adder_A_17)
+     LUT2:I1->O            1   0.612   0.000  Mmult_Product_out1_submult_00_Madd_lut<17> (Mmult_Product_out1_submult_00_Madd_lut<17>)
+     MUXCY:S->O            1   0.404   0.000  Mmult_Product_out1_submult_00_Madd_cy<17> (Mmult_Product_out1_submult_00_Madd_cy<17>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<18> (Mmult_Product_out1_submult_00_Madd_cy<18>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<19> (Mmult_Product_out1_submult_00_Madd_cy<19>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<20> (Mmult_Product_out1_submult_00_Madd_cy<20>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<21> (Mmult_Product_out1_submult_00_Madd_cy<21>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<22> (Mmult_Product_out1_submult_00_Madd_cy<22>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<23> (Mmult_Product_out1_submult_00_Madd_cy<23>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<24> (Mmult_Product_out1_submult_00_Madd_cy<24>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<25> (Mmult_Product_out1_submult_00_Madd_cy<25>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<26> (Mmult_Product_out1_submult_00_Madd_cy<26>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<27> (Mmult_Product_out1_submult_00_Madd_cy<27>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<28> (Mmult_Product_out1_submult_00_Madd_cy<28>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<29> (Mmult_Product_out1_submult_00_Madd_cy<29>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<30> (Mmult_Product_out1_submult_00_Madd_cy<30>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<31> (Mmult_Product_out1_submult_00_Madd_cy<31>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<32> (Mmult_Product_out1_submult_00_Madd_cy<32>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<33> (Mmult_Product_out1_submult_00_Madd_cy<33>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<34> (Mmult_Product_out1_submult_00_Madd_cy<34>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<35> (Mmult_Product_out1_submult_00_Madd_cy<35>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<36> (Mmult_Product_out1_submult_00_Madd_cy<36>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<37> (Mmult_Product_out1_submult_00_Madd_cy<37>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<38> (Mmult_Product_out1_submult_00_Madd_cy<38>)
+     MUXCY:CI->O           0   0.051   0.000  Mmult_Product_out1_submult_00_Madd_cy<39> (Mmult_Product_out1_submult_00_Madd_cy<39>)
+     XORCY:CI->O           1   0.699   0.426  Mmult_Product_out1_submult_00_Madd_xor<40> (Mmult_Product_out1_submult_0_40)
+     LUT2:I1->O            1   0.612   0.000  Mmult_Product_out1_Madd_lut<40> (Mmult_Product_out1_Madd_lut<40>)
+     MUXCY:S->O            1   0.404   0.000  Mmult_Product_out1_Madd_cy<40> (Mmult_Product_out1_Madd_cy<40>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_Madd_cy<41> (Mmult_Product_out1_Madd_cy<41>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_Madd_cy<42> (Mmult_Product_out1_Madd_cy<42>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_Madd_cy<43> (Mmult_Product_out1_Madd_cy<43>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_Madd_cy<44> (Mmult_Product_out1_Madd_cy<44>)
+     MUXCY:CI->O           1   0.051   0.000  Mmult_Product_out1_Madd_cy<45> (Mmult_Product_out1_Madd_cy<45>)
+     MUXCY:CI->O           0   0.051   0.000  Mmult_Product_out1_Madd_cy<46> (Mmult_Product_out1_Madd_cy<46>)
+     XORCY:CI->O           2   0.699   0.383  Mmult_Product_out1_Madd_xor<47> (Product_out1<47>)
+     LUT4:I3->O            1   0.612   0.000  Mcompar_Gain2_out1_cmp_eq0000_lut<11> (Mcompar_Gain2_out1_cmp_eq0000_lut<11>)
+     MUXCY:S->O           48   0.752   1.146  Mcompar_Gain2_out1_cmp_eq0000_cy<11> (Mcompar_Gain2_out1_cmp_eq0000_cy<11>)
+     LUT2:I1->O           67   0.612   1.234  Gain2_out1<25>1 (Gain2_out1<25>)
+     begin scope: 'u_Normalize_mul'
+     LUT4:I0->O            1   0.612   0.387  Madd_p_0_sub0000_Madd_lut<0>127_SW0 (N299)
+     LUT4:I2->O            1   0.612   0.360  Madd_p_0_sub0000_Madd_lut<0>180_SW0 (N464)
+     LUT4:I3->O            1   0.612   0.426  Madd_p_0_sub0000_Madd_lut<0>180 (Madd_p_0_sub0000_Madd_lut<0>180)
+     LUT4:I1->O            1   0.612   0.426  Madd_p_0_sub0000_Madd_lut<0>387 (de<0>)
+     end scope: 'u_Normalize_mul'
+     LUT2:I1->O            1   0.612   0.000  Msub_Add3_sub_temp_lut<0> (Msub_Add3_sub_temp_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Msub_Add3_sub_temp_cy<0> (Msub_Add3_sub_temp_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_Add3_sub_temp_cy<1> (Msub_Add3_sub_temp_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_Add3_sub_temp_cy<2> (Msub_Add3_sub_temp_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_Add3_sub_temp_cy<3> (Msub_Add3_sub_temp_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_Add3_sub_temp_cy<4> (Msub_Add3_sub_temp_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_Add3_sub_temp_cy<5> (Msub_Add3_sub_temp_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_Add3_sub_temp_cy<6> (Msub_Add3_sub_temp_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  Msub_Add3_sub_temp_cy<7> (Msub_Add3_sub_temp_cy<7>)
+     MUXCY:CI->O           0   0.051   0.000  Msub_Add3_sub_temp_cy<8> (Msub_Add3_sub_temp_cy<8>)
+     XORCY:CI->O           8   0.699   0.673  Msub_Add3_sub_temp_xor<9> (Add3_sub_temp<9>)
+     LUT3:I2->O            5   0.612   0.607  Add3_out1<1>1 (C_exp<1>)
+     end scope: 'u_fp_mul'
+     begin scope: 'u_fp_sum'
+     LUT2:I1->O            1   0.612   0.000  Mcompar_Relational_Operator_relop1_cmp_lt0000_lut<1> (Mcompar_Relational_Operator_relop1_cmp_lt0000_lut<1>)
+     MUXCY:S->O            1   0.404   0.000  Mcompar_Relational_Operator_relop1_cmp_lt0000_cy<1> (Mcompar_Relational_Operator_relop1_cmp_lt0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_Relational_Operator_relop1_cmp_lt0000_cy<2> (Mcompar_Relational_Operator_relop1_cmp_lt0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_Relational_Operator_relop1_cmp_lt0000_cy<3> (Mcompar_Relational_Operator_relop1_cmp_lt0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_Relational_Operator_relop1_cmp_lt0000_cy<4> (Mcompar_Relational_Operator_relop1_cmp_lt0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_Relational_Operator_relop1_cmp_lt0000_cy<5> (Mcompar_Relational_Operator_relop1_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  Mcompar_Relational_Operator_relop1_cmp_lt0000_cy<6> (Mcompar_Relational_Operator_relop1_cmp_lt0000_cy<6>)
+     MUXCY:CI->O          29   0.399   1.102  Mcompar_Relational_Operator_relop1_cmp_lt0000_cy<7> (Mcompar_Relational_Operator_relop1_cmp_lt0000_cy<7>)
+     LUT3:I2->O            3   0.612   0.520  exp_out1<0>1 (exp_out1<0>)
+     LUT2:I1->O            1   0.612   0.000  Msub_Add_sub_temp_lut<0> (Msub_Add_sub_temp_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Msub_Add_sub_temp_cy<0> (Msub_Add_sub_temp_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add_sub_temp_cy<1> (Msub_Add_sub_temp_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add_sub_temp_cy<2> (Msub_Add_sub_temp_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add_sub_temp_cy<3> (Msub_Add_sub_temp_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add_sub_temp_cy<4> (Msub_Add_sub_temp_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add_sub_temp_cy<5> (Msub_Add_sub_temp_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add_sub_temp_cy<6> (Msub_Add_sub_temp_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add_sub_temp_cy<7> (Msub_Add_sub_temp_cy<7>)
+     MUXCY:CI->O           0   0.052   0.000  Msub_Add_sub_temp_cy<8> (Msub_Add_sub_temp_cy<8>)
+     XORCY:CI->O          47   0.699   1.080  Msub_Add_sub_temp_xor<9> (Add_out1<7>)
+     LUT4:I3->O           68   0.612   1.152  Add_out1<5>1 (Add_out1<5>)
+     begin scope: 'u_Variable_bitshift'
+     LUT4:I1->O            6   0.612   0.599  y_tmp<10>581 (y_tmp<10>_bdd114)
+     LUT3:I2->O            1   0.612   0.000  y_tmp<3>41_G (N183)
+     MUXF5:I1->O           4   0.278   0.529  y_tmp<3>41 (y_tmp<3>_bdd6)
+     LUT3:I2->O            1   0.612   0.000  y_tmp<4>43_SW0_G (N147)
+     MUXF5:I1->O           1   0.278   0.426  y_tmp<4>43_SW0 (N32)
+     LUT4:I1->O            4   0.612   0.651  y_tmp<4>43 (y<4>)
+     end scope: 'u_Variable_bitshift'
+     LUT2:I0->O            1   0.612   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_lut<4> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_lut<4>)
+     MUXCY:S->O            1   0.404   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<4> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<5> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<6> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<7> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<8> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<9> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<10> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<11> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<12> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<13> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<14> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<14>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<15> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<15>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<16> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<16>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<17> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<17>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<18> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<18>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<19> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<19>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<20> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<20>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<21> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<21>)
+     MUXCY:CI->O           1   0.052   0.000  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<22> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<22>)
+     MUXCY:CI->O          26   0.399   1.101  Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<23> (Mcompar_Relational_Operator1_relop1_cmp_lt0000_cy<23>)
+     LUT3:I2->O            1   0.612   0.360  bigger_out1<0>1 (bigger_out1<0>)
+     LUT4:I3->O            1   0.612   0.000  Msub_Add5_sub_temp_lut<0> (Msub_Add5_sub_temp_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Msub_Add5_sub_temp_cy<0> (Msub_Add5_sub_temp_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<1> (Msub_Add5_sub_temp_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<2> (Msub_Add5_sub_temp_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<3> (Msub_Add5_sub_temp_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<4> (Msub_Add5_sub_temp_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<5> (Msub_Add5_sub_temp_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<6> (Msub_Add5_sub_temp_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<7> (Msub_Add5_sub_temp_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<8> (Msub_Add5_sub_temp_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<9> (Msub_Add5_sub_temp_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<10> (Msub_Add5_sub_temp_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<11> (Msub_Add5_sub_temp_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<12> (Msub_Add5_sub_temp_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<13> (Msub_Add5_sub_temp_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<14> (Msub_Add5_sub_temp_cy<14>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<15> (Msub_Add5_sub_temp_cy<15>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<16> (Msub_Add5_sub_temp_cy<16>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<17> (Msub_Add5_sub_temp_cy<17>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<18> (Msub_Add5_sub_temp_cy<18>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<19> (Msub_Add5_sub_temp_cy<19>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<20> (Msub_Add5_sub_temp_cy<20>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<21> (Msub_Add5_sub_temp_cy<21>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<22> (Msub_Add5_sub_temp_cy<22>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add5_sub_temp_cy<23> (Msub_Add5_sub_temp_cy<23>)
+     MUXCY:CI->O           0   0.052   0.000  Msub_Add5_sub_temp_cy<24> (Msub_Add5_sub_temp_cy<24>)
+     XORCY:CI->O          25   0.699   1.074  Msub_Add5_sub_temp_xor<25> (Add5_sub_temp<25>)
+     LUT4:I3->O           72   0.612   1.236  exp1_out1<2>1 (exp1_out1<2>)
+     begin scope: 'u_Normalize'
+     LUT3_L:I0->LO         1   0.612   0.103  de_tmp<1>645_SW0_SW0 (N776)
+     LUT4:I3->O            1   0.612   0.360  de_tmp<1>645_SW0 (N754)
+     LUT4_D:I3->O          1   0.612   0.360  de_tmp<1>645 (de_tmp<1>_bdd11)
+     LUT4:I3->O            1   0.612   0.360  de_tmp<1>29 (de_tmp<1>29)
+     LUT4_L:I3->LO         1   0.612   0.103  de_tmp<1>1011 (de_tmp<1>101)
+     LUT4:I3->O            1   0.612   0.360  de_tmp<1>206 (de<1>)
+     end scope: 'u_Normalize'
+     LUT4:I3->O            1   0.612   0.000  Msub_Add3_sub_temp_lut<1> (Msub_Add3_sub_temp_lut<1>)
+     MUXCY:S->O            1   0.404   0.000  Msub_Add3_sub_temp_cy<1> (Msub_Add3_sub_temp_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add3_sub_temp_cy<2> (Msub_Add3_sub_temp_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add3_sub_temp_cy<3> (Msub_Add3_sub_temp_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add3_sub_temp_cy<4> (Msub_Add3_sub_temp_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add3_sub_temp_cy<5> (Msub_Add3_sub_temp_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add3_sub_temp_cy<6> (Msub_Add3_sub_temp_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Msub_Add3_sub_temp_cy<7> (Msub_Add3_sub_temp_cy<7>)
+     MUXCY:CI->O           0   0.052   0.000  Msub_Add3_sub_temp_cy<8> (Msub_Add3_sub_temp_cy<8>)
+     XORCY:CI->O           8   0.699   0.673  Msub_Add3_sub_temp_xor<9> (Add3_sub_temp<9>)
+     LUT3:I2->O            1   0.612   0.000  Add3_out1<7>1 (C_exp<7>)
+     end scope: 'u_fp_sum'
+     end scope: 'XLXI_150'
+     begin scope: 'XLXI_148'
+     begin scope: 'u_ivedsp'
+     FD:D                      0.268          Integer_Delay3_out1_30
+    ----------------------------------------
+    Total                     67.104ns (43.647ns logic, 23.457ns route)
+                                       (65.0% logic, 35.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_162/clock1/count_7'
+  Clock period: 6.166ns (frequency: 162.182MHz)
+  Total number of paths / destination ports: 109 / 58
+-------------------------------------------------------------------------
+Delay:               3.083ns (Levels of Logic = 3)
+  Source:            XLXI_162/conter1/count_reg_3 (FF)
+  Destination:       XLXI_162/spi_program/DATA_3 (FF)
+  Source Clock:      XLXI_162/clock1/count_7 falling
+  Destination Clock: XLXI_162/clock1/count_7 rising
+
+  Data Path: XLXI_162/conter1/count_reg_3 to XLXI_162/spi_program/DATA_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.514   0.651  count_reg_3 (count_reg_3)
+     end scope: 'conter1'
+     begin scope: 'spi_program'
+     LUT3:I0->O            1   0.612   0.426  rdata<0>41 (rdata<0>_bdd6)
+     LUT4:I1->O            1   0.612   0.000  rdata<3>1 (rdata<3>)
+     FD:D                      0.268          DATA_3
+    ----------------------------------------
+    Total                      3.083ns (2.006ns logic, 1.077ns route)
+                                       (65.1% logic, 34.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_162/clock1/clk1s1'
+  Clock period: 4.751ns (frequency: 210.468MHz)
+  Total number of paths / destination ports: 94 / 64
+-------------------------------------------------------------------------
+Delay:               4.751ns (Levels of Logic = 3)
+  Source:            XLXI_162/start_d (FF)
+  Destination:       XLXI_162/reg2o/reg_buf_0 (FF)
+  Source Clock:      XLXI_162/clock1/clk1s1 rising
+  Destination Clock: XLXI_162/clock1/clk1s1 rising
+
+  Data Path: XLXI_162/start_d to XLXI_162/reg2o/reg_buf_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.514   0.509  start_d (start_d)
+     LUT2:I0->O           34   0.612   1.142  load_reg1 (load_reg)
+     begin scope: 'reg2o'
+     LUT2:I1->O           16   0.612   0.879  reg_buf_not00011 (reg_buf_not0001)
+     FDE:CE                    0.483          reg_buf_0
+    ----------------------------------------
+    Total                      4.751ns (2.221ns logic, 2.530ns route)
+                                       (46.7% logic, 53.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              1.731ns (Levels of Logic = 2)
+  Source:            E_TX_CLK (PAD)
+  Destination:       XLXI_5/Integer_Delay1_out1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: E_TX_CLK to XLXI_5/Integer_Delay1_out1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  E_TX_CLK_IBUF (E_TX_CLK_IBUF)
+     begin scope: 'XLXI_5'
+     FDCE:D                    0.268          Integer_Delay1_out1
+    ----------------------------------------
+    Total                      1.731ns (1.374ns logic, 0.357ns route)
+                                       (79.4% logic, 20.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_162/clock1/count_7'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.754ns (Levels of Logic = 2)
+  Source:            a_sdo (PAD)
+  Destination:       XLXI_162/reg2/reg_buf_0 (FF)
+  Destination Clock: XLXI_162/clock1/count_7 falling
+
+  Data Path: a_sdo to XLXI_162/reg2/reg_buf_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.106   0.380  a_sdo_IBUF (a_sdo_IBUF)
+     begin scope: 'XLXI_162'
+     begin scope: 'reg2'
+     FDE:D                     0.268          reg_buf_0
+    ----------------------------------------
+    Total                      1.754ns (1.374ns logic, 0.380ns route)
+                                       (78.3% logic, 21.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 248 / 13
+-------------------------------------------------------------------------
+Offset:              11.373ns (Levels of Logic = 8)
+  Source:            XLXI_5/u_Transmit/ind1_reg_7 (FF)
+  Destination:       E_TXD<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: XLXI_5/u_Transmit/ind1_reg_7 to E_TXD<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.514   0.651  ind1_reg_7 (ind1_reg_7)
+     LUT4:I0->O            4   0.612   0.651  is_Transmit_cmp_lt0000112 (is_Transmit_cmp_lt0000112)
+     LUT2:I0->O           18   0.612   0.911  is_Transmit_cmp_lt0000126 (is_Transmit_cmp_lt0000)
+     LUT4:I3->O            1   0.612   0.387  TX_DATA_reg_next_0_mux00051_SW0 (N61)
+     LUT3:I2->O            4   0.612   0.651  TX_DATA_reg_next_0_mux00051 (N4)
+     LUT4:I0->O            1   0.612   0.387  TX_DATA_reg_next_3_mux00054 (TX_DATA_reg_next_3_mux00054)
+     LUT3:I2->O            2   0.612   0.380  TX_DATA_reg_next_3_mux000516 (TX_DATA<3>)
+     end scope: 'u_Transmit'
+     end scope: 'XLXI_5'
+     OBUF:I->O                 3.169          E_TXD_3_OBUF (E_TXD<3>)
+    ----------------------------------------
+    Total                     11.373ns (7.355ns logic, 4.018ns route)
+                                       (64.7% logic, 35.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 162.00 secs
+Total CPU time to Xst completion: 162.58 secs
+ 
+--> 
+
+Total memory usage is 445084 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  253 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
+

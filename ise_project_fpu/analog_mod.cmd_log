@@ -1,0 +1,4 @@
+vhdtdtfi -lib work analog_mod_pkg.vhd -lib work Subsystem.vhd -lib work Handle_Timer_Event.vhd -lib work DAC_Init.vhd -lib work Convert_Integer_to_Single.vhd -lib work analog_mod.vhd -prj ise_project_1 -o analog_mod.spl -module analog_mod -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e analog_mod.spl D:/Dan/FPGA_FPU/ise_project_fpu/analog_mod.sym 
+vhdtdtfi -lib work analog_mod_pkg.vhd -lib work Subsystem.vhd -lib work Handle_Timer_Event.vhd -lib work DAC_Init.vhd -lib work Convert_Integer_to_Single.vhd -lib work analog_mod.vhd -prj ise_project_1 -o analog_mod.spl -module analog_mod -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e analog_mod.spl D:/Dan/FPGA_FPU/ise_project_fpu/analog_mod.sym 

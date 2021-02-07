@@ -1,0 +1,25 @@
+vhdtdtfi -lib work analog_ext_pkg.vhd -lib work MCP3201_SPI_Controller.vhd -lib work analog_ext.vhd -lib work analog_contr.vhd -prj ise_project_1 -o analog_contr.spl -module analog_contr -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e analog_contr.spl D:/Dan/FPGA_FPU/ise_project_fpu/analog_contr.sym 
+vhdtdtfi -lib work analog_ext_pkg.vhd -lib work MCP3201_SPI_Controller.vhd -lib work analog_ext.vhd -lib work analog_contr.vhd -prj ise_project_1 -o analog_contr.spl -module analog_contr -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e analog_contr.spl D:/Dan/FPGA_FPU/ise_project_fpu/analog_contr.sym 
+vhdtdtfi -lib work analog_ext_pkg.vhd -lib work MCP3201_SPI_Controller.vhd -lib work analog_ext.vhd -lib work analog_contr.vhd -prj ise_project_1 -o analog_contr.spl -module analog_contr -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e analog_contr.spl D:/Dan/FPGA_FPU/ise_project_fpu/analog_contr.sym 
+vhdtdtfi -lib work analog_ext_pkg.vhd -lib work MCP3201_SPI_Controller.vhd -lib work analog_ext.vhd -lib work analog_contr.vhd -prj ise_project_1 -o analog_contr.spl -module analog_contr -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -lib work analog_ext_pkg.vhd -lib work MCP3201_SPI_Controller.vhd -lib work analog_ext.vhd -lib work analog_contr.vhd -prj ise_project_1 -o analog_contr.spl -module analog_contr -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e analog_contr.spl D:/Dan/FPGA_FPU/ise_project_fpu/analog_contr.sym 
+vhdtdtfi -lib work analog_ext_pkg.vhd -lib work MCP4822_SPI_Controller.vhd -lib work MCP3201_SPI_Controller.vhd -lib work analog_ext.vhd -lib work analog_contr.vhd -prj ise_project_1 -o analog_contr.spl -module analog_contr -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e analog_contr.spl D:/Dan/FPGA_FPU/ise_project_fpu/analog_contr.sym 
+vhdtdtfi -lib work analog_ext_pkg.vhd -lib work MCP4822_SPI_Controller.vhd -lib work MCP3201_SPI_Controller.vhd -lib work analog_ext.vhd -lib work analog_contr.vhd -prj ise_project_1 -o analog_contr.spl -module analog_contr -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e analog_contr.spl D:/Dan/FPGA_FPU/ise_project_fpu/analog_contr.sym 
+vhdtdtfi -lib work analog_ext_pkg.vhd -lib work MCP4822_SPI_Controller.vhd -lib work MCP3201_SPI_Controller.vhd -lib work analog_ext.vhd -lib work analog_contr.vhd -prj ise_project_1 -o analog_contr.spl -module analog_contr -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e analog_contr.spl D:/Dan/FPGA_FPU/ise_project_fpu/analog_contr.sym 
+vhdtdtfi -lib work analog_ext_pkg.vhd -lib work Single_to_Uint.vhd -lib work Output_register.vhd -lib work MCP4822_SPI_Controller.vhd -lib work MCP3201_SPI_Controller.vhd -lib work Int_to_Single1.vhd -lib work analog_ext.vhd -lib work analog_contr.vhd -prj ise_project_1 -o analog_contr.spl -module analog_contr -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e analog_contr.spl D:/Dan/FPGA_FPU/ise_project_fpu/analog_contr.sym 
+vhdtdtfi -lib work analog_ext_pkg.vhd -lib work Single_to_Uint.vhd -lib work Output_register.vhd -lib work MCP4822_SPI_Controller.vhd -lib work MCP3201_SPI_Controller.vhd -lib work Int_to_Single1.vhd -lib work analog_ext.vhd -lib work analog_contr.vhd -prj ise_project_1 -o analog_contr.spl -module analog_contr -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e analog_contr.spl D:/Dan/FPGA_FPU/ise_project_fpu/analog_contr.sym 
+vhdtdtfi -lib work analog_ext_pkg.vhd -lib work Single_to_Uint.vhd -lib work Output_register.vhd -lib work Int_to_Single1.vhd -lib work Analog_Board_SPI_Controller.vhd -lib work analog_ext.vhd -lib work analog_contr.vhd -prj ise_project_1 -o analog_contr.spl -module analog_contr -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e analog_contr.spl D:/Dan/FPGA_FPU/ise_project_fpu/analog_contr.sym 
+vhdtdtfi -lib work analog_contr.vhd -prj ise_project_1 -o analog_contr.spl -module analog_contr -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e analog_contr.spl D:/Dan/FPGA_FPU/ise_project_fpu/analog_contr.sym 
+vhdtdtfi -lib work analog_ext_pkg.vhd -lib work Single_to_Uint.vhd -lib work Output_register.vhd -lib work Int_to_Single1.vhd -lib work Enabled_Subsystem.vhd -lib work analog_ext.vhd -lib work analog_contr.vhd -prj ise_project_1 -o analog_contr.spl -module analog_contr -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e analog_contr.spl D:/Dan/FPGA_FPU/ise_project_fpu/analog_contr.sym 

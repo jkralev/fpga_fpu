@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="contr1_conv">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2013-3-4T20:13:43</timestamp>
+    <pin polarity="Input" x="0" y="-1056" name="clk" />
+    <pin polarity="Input" x="0" y="-896" name="Timer_ISR" />
+    <pin polarity="Input" x="0" y="-976" name="Instruction(15:0)" />
+    <pin polarity="Input" x="0" y="-544" name="Data_RAM_in(31:0)" />
+    <pin polarity="Input" x="0" y="-144" name="FPU_Result(31:0)" />
+    <pin polarity="Input" x="0" y="-736" name="BRAM_out(7:0)" />
+    <pin polarity="Input" x="0" y="-48" name="adc1(31:0)" />
+    <pin polarity="Input" x="0" y="0" name="adc2(31:0)" />
+    <pin polarity="Output" x="496" y="-512" name="Write_RAM" />
+    <pin polarity="Output" x="496" y="-992" name="trig_pack" />
+    <pin polarity="Output" x="496" y="-928" name="write_outram" />
+    <pin polarity="Output" x="496" y="-1040" name="Instruction_address(11:0)" />
+    <pin polarity="Output" x="496" y="-464" name="RAM_Addr(11:0)" />
+    <pin polarity="Output" x="496" y="-400" name="Data_RAM(31:0)" />
+    <pin polarity="Output" x="496" y="-240" name="FPU_Op1(31:0)" />
+    <pin polarity="Output" x="496" y="-176" name="FPU_Op2(31:0)" />
+    <pin polarity="Output" x="496" y="-96" name="FPU_Op3(31:0)" />
+    <pin polarity="Output" x="496" y="-704" name="BRAM_addr(10:0)" />
+    <pin polarity="Output" x="496" y="-640" name="select_mem(3:0)" />
+    <pin polarity="Output" x="496" y="-880" name="data_outram(7:0)" />
+    <pin polarity="Output" x="496" y="-816" name="addr_outram(13:0)" />
+    <pin polarity="Output" x="496" y="48" name="dac1(31:0)" />
+    <pin polarity="Output" x="496" y="96" name="dac2(31:0)" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="248" y="-1096" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1056" type="pin clk" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-896" type="pin Timer_ISR" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-976" type="pin Instruction(15:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-544" type="pin Data_RAM_in(31:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-144" type="pin FPU_Result(31:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-736" type="pin BRAM_out(7:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-48" type="pin adc1(31:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="0" type="pin adc2(31:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-512" type="pin Write_RAM" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-992" type="pin trig_pack" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-928" type="pin write_outram" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-1040" type="pin Instruction_address(11:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-464" type="pin RAM_Addr(11:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-400" type="pin Data_RAM(31:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-240" type="pin FPU_Op1(31:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-176" type="pin FPU_Op2(31:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-96" type="pin FPU_Op3(31:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-704" type="pin BRAM_addr(10:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-640" type="pin select_mem(3:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-880" type="pin data_outram(7:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-816" type="pin addr_outram(13:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="48" type="pin dac1(31:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="96" type="pin dac2(31:0)" />
+        <rect width="64" x="432" y="36" height="24" />
+        <line x2="496" y1="48" y2="48" x1="432" />
+        <rect width="64" x="432" y="84" height="24" />
+        <line x2="496" y1="96" y2="96" x1="432" />
+        <rect width="64" x="0" y="-60" height="24" />
+        <line x2="0" y1="-48" y2="-48" x1="64" />
+        <rect width="64" x="0" y="-12" height="24" />
+        <line x2="0" y1="0" y2="0" x1="64" />
+        <rect width="64" x="432" y="-108" height="24" />
+        <line x2="496" y1="-96" y2="-96" x1="432" />
+        <line x2="0" y1="-1056" y2="-1056" x1="64" />
+        <rect width="64" x="0" y="-748" height="24" />
+        <line x2="0" y1="-736" y2="-736" x1="64" />
+        <line x2="496" y1="-992" y2="-992" x1="432" />
+        <line x2="496" y1="-928" y2="-928" x1="432" />
+        <rect width="64" x="432" y="-892" height="24" />
+        <line x2="496" y1="-880" y2="-880" x1="432" />
+        <rect width="64" x="432" y="-828" height="24" />
+        <line x2="496" y1="-816" y2="-816" x1="432" />
+        <rect width="64" x="432" y="-716" height="24" />
+        <line x2="496" y1="-704" y2="-704" x1="432" />
+        <rect width="64" x="432" y="-652" height="24" />
+        <line x2="496" y1="-640" y2="-640" x1="432" />
+        <line x2="496" y1="-512" y2="-512" x1="432" />
+        <rect width="64" x="432" y="-476" height="24" />
+        <line x2="496" y1="-464" y2="-464" x1="432" />
+        <rect width="64" x="432" y="-412" height="24" />
+        <line x2="496" y1="-400" y2="-400" x1="432" />
+        <rect width="64" x="432" y="-252" height="24" />
+        <line x2="496" y1="-240" y2="-240" x1="432" />
+        <rect width="64" x="432" y="-188" height="24" />
+        <line x2="496" y1="-176" y2="-176" x1="432" />
+        <rect width="64" x="432" y="-1052" height="24" />
+        <line x2="496" y1="-1040" y2="-1040" x1="432" />
+        <rect width="64" x="0" y="-156" height="24" />
+        <line x2="0" y1="-144" y2="-144" x1="64" />
+        <rect width="64" x="0" y="-556" height="24" />
+        <line x2="0" y1="-544" y2="-544" x1="64" />
+        <rect width="64" x="0" y="-988" height="24" />
+        <line x2="0" y1="-976" y2="-976" x1="64" />
+        <line x2="0" y1="-896" y2="-896" x1="64" />
+        <rect width="368" x="64" y="-1088" height="1264" />
+    </graph>
+</symbol>

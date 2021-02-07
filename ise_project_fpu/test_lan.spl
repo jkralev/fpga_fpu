@@ -1,0 +1,14 @@
+[Inputs]
+clk
+reset
+clk_enable
+TX_CLK
+btn_1
+=Data_out[7:0]=
+[Outputs]
+ce_out
+led_0
+tx_en
+=tx_data[0:3]=
+=Address[10:0]=
+[BiDir]

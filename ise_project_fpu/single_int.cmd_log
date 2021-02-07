@@ -1,0 +1,2 @@
+vhdtdtfi -lib work Single_to_Uint.vhd -lib work single_int.vhd -prj ise_project_1 -o single_int.spl -module single_int -template C:/Xilinx/13.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w single_int.spl D:/Dan/FPGA_FPU/ise_project_fpu/single_int.sym 

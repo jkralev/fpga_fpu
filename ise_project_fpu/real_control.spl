@@ -1,0 +1,9 @@
+[Inputs]
+clk
+we
+en
+=addr[11:0]=
+=di[31:0]=
+[Outputs]
+=do[31:0]=
+[BiDir]

@@ -1,0 +1,8 @@
+[Inputs]
+=Address[10:0]=
+=Select_mem[3:0]=
+=Data_out1[7:0]=
+[Outputs]
+=Data[7:0]=
+=Address2[13:0]=
+[BiDir]

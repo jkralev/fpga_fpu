@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Dan\FPGA_FPU\ise_project_fpu\Top_Module.ncd
+OUTFILE=D:\Dan\FPGA_FPU\ise_project_fpu\Top_Module.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5fg320
+WORKINGDIR=D:\Dan\FPGA_FPU\ise_project_fpu
+LICENSE=WebPack
+USER_INFO=__0_0_0

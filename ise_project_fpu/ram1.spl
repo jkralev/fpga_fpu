@@ -1,0 +1,10 @@
+[Inputs]
+clk
+we
+en
+=addrw[10:0]=
+=addrr[10:0]=
+=di[7:0]=
+[Outputs]
+=do[7:0]=
+[BiDir]

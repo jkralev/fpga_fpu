@@ -1,0 +1,6 @@
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\fp_mul_pkg.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\Variable_bitshift.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\Normalize.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\fp_sum.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\fp_mul.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\fp_wrapper.vhd"

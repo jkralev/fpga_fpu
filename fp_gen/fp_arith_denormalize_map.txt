@@ -1,0 +1,2 @@
+fp_arith_denormalize/Variable bitshift --> Variable_bitshift
+fp_arith_denormalize --> fp_arith_denormalize

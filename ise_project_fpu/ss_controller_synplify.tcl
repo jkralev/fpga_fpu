@@ -1,0 +1,22 @@
+project -new ss_controller.prj
+add_file ss_controller_pkg.vhd
+add_file MAC_instruction.vhd
+add_file MAC_instruction_Controller1.vhd
+add_file Forward_speed_tracking.vhd
+add_file MAC_instruction_block.vhd
+add_file MAC_instruction_Controller1_block.vhd
+add_file Pitch_speed_compensator.vhd
+add_file MAC_instruction_block1.vhd
+add_file Roll_speed_compensator.vhd
+add_file MAC_instruction_block2.vhd
+add_file Side_speed_tracking.vhd
+add_file MAC_instruction_block3.vhd
+add_file Vectical_speed_tracking.vhd
+add_file MAC_instruction_block4.vhd
+add_file Yaw_speed.vhd
+add_file ss_controller.vhd
+set_option -technology VIRTEX4
+set_option -part XC4VSX35
+set_option -synthesis_onoff_pragma 0
+set_option -frequency auto
+project -run synthesis

@@ -1,0 +1,8 @@
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\analog_ext_pkg.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\Single_to_Uint.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\Output_register.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\MCP4822_SPI_Controller.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\MCP3201_SPI_Controller.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\Int_to_Single1.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\analog_ext.vhd"
+vhdl work "D:\Dan\FPGA_FPU\ise_project_fpu\analog_contr.vhd"
